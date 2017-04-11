@@ -1,6 +1,140 @@
-$background-color: #f11110;
+$prime-blue: #2196F3;
+$background-color: #2196F3;
+$text-color: #0C090A;
+$nav-height: 0px;
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
  
 body {
-    color: $background-color;
-    margin: 1px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: $text-color;
+    background: url(/application/img/bg.png) repeat;
+    font-size: 14px;
+
+  h1 {
+    font-size: 74px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+     font-size: 30px;
+  }
+    
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 800px;
+  background-clip: content-box;
+  background-color: black;
+  background-attachment: fixed;
+  /*background-image: url(../../application/img/codebg.jpg);*/
+  background-position: center left;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  top: 40%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  z-index: 90;
+  position: absolute;
+  text-align: center;
+  margin: 0;
+
+  h1, h2 {
+    color: white;
+    margin: 0;
+  }
+}
+
+.page-container {
+/*    background-color: $prime-blue;*/
+    height: 100%;
+    width: 100%;
+    top: -60px
+}
+
+.move-down {
+  margin-top: 70px;
+}
+
+.content {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -142px; 
+    height: 1200px;
+}
+
+footer {
+    bottom: 0;
+    height: 142px; 
+    background: white;
+    color: $prime-blue;
+}
+
+.navbar-fixed {
+  position: fixed !important;
+/*  top: -($nav-height);*/
+}
+
+.logo img {
+  height: 42px;
+  padding: 5px;
+}
+
+.main-nav {
+  width: 100%;
+  z-index: 99;
+  position: relative;
+  top: -60px;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+
+  }
+  a {
+    padding: 20px;
+    font-size: 1.0rem;
+    max-width: 140px;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    color: $prime-blue;
+    transition: all 0.2s ease;
+    &:hover, &:focus {
+/*      background: $prime-blue;*/
+      color: white;
+    }
+  }
+  &.outlines {
+    * {
+      outline: 1px solid rgba(red, 0.5); 
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-nav {
+    a {
+      max-width: 500px;
+      font-size: 1rem; 
+    }
+  }
 }

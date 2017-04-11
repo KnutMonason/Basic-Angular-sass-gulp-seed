@@ -8,25 +8,27 @@
     <meta name="Knut M" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="application/css/style.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 
 <body ng-app="myApp">
+    <div ng-include='"application/templates/hero.html"'></div>
+    <div ng-include='"application/templates/navbar.html"'></div>
 
-    <ul class="menu">
-        <li><a href="#!/view1">view1</a></li>
-        <li><a href="#!/view2">view2</a></li>
-    </ul>
-
-    <div ng-include='"application/templates/header.html"'></div>
-
+    <div class="page-container">
+        <div class="content">
+            <div ng-view></div>
+        </div>
+    </div>
     <div ng-include='"application/templates/footer.html"'></div>
-    <div ng-view></div>
 
     <script src="node_modules/angular/angular.js"></script>
+    <!--    <script src="node_modules/angular-animate/angular-animate.js"></script>-->
     <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/skrollr/dist/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+    </script>
     <script src="application/app.js"></script>
 </body>
 
