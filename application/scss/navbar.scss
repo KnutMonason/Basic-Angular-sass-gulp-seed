@@ -1,0 +1,33 @@
+$yellow: red;
+
+nav {
+    position: absolute;
+    background-color: $yellow;
+    width: 220px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: darkorange;
+    padding: 1.4rem 0;
+    z-index: 200;
+    overflow: auto;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    line-height: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+nav a:hover, .active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.fixed {
+    position: fixed; 
+}
