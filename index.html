@@ -10,19 +10,20 @@
     <link rel="stylesheet" href="application/css/style.css">
 </head>
 
-<body ng-app="myApp">
-    <div ng-include='"application/templates/hero.html"'></div>
-    <div ng-include='"application/templates/navbar.html"'></div>
+<body ng-app="myApp" ng-controller="ctrl">
+    <div ng-include='"application/templates/header/header.html"'></div>
 
-    <div class="page-container">
-        <div class="content">
+    <main>
+        <div ng-include='"application/templates/navbar/navbar.html"'></div>
+            <section id="about"ng-include='"application/templates/content/about.html"'></section>
+            <section id="services" ng-include='"application/templates/content/services.html"'></section>
+            <section id="processes" ng-include='"application/templates/content/process.html"'></section>
+            <section id="contact"ng-include='"application/templates/content/contact.html"'></section>
             <div ng-view></div>
-        </div>
-    </div>
-    <div ng-include='"application/templates/footer.html"'></div>
+    </main>
+    <div ng-include='"application/templates/footer/footer.html"'></div>
 
     <script src="node_modules/angular/angular.js"></script>
-    <!--    <script src="node_modules/angular-animate/angular-animate.js"></script>-->
     <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/skrollr/dist/skrollr.min.js"></script>

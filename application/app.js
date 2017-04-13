@@ -4,43 +4,41 @@ var app = angular.module('myApp', [
   'ngRoute'
 ]);
 
-app.config(['$routeProvider', function ($routeProvider) {
-  $routeProvider
-    .when("/", { templateUrl: "application/view1/view1.html", controller: "ctrl" })
-    .when("/view2", { templateUrl: "application/view2/view2.html", controller: "ctrl" })
-    .when("/view1", { templateUrl: "application/view1/view1.html", controller: "ctrl" })
-    .otherwise("/404", { templateUrl: "partials/404.html", controller: "ctrl" });
-}]);
+app.controller('ctrl', function () {
+  console.log("working");
 
-app.controller('ctrl', function (/* $scope, $location, $http */) {
-  $(document).ready(function ($) {
+  var allSections = [],
+    sections = [],
+    navElement = document.getElementsByTagName("nav"),
+    mainElement = $('main'),
+    headerElement = document.getElementsByTagName('header'),
+    windowHeight = $(document).height();
 
-    var $navbar = $(".main-nav"),
-      height = $navbar.height(),
-      $pageContainer = $(".page-container")
-
-    var y_pos = $navbar.offset().top;
-
-    $(document).scroll(function () {
-      var scrollTop = $(this).scrollTop();
-
-      if (scrollTop > y_pos + height - 20) {
-        $navbar.addClass("navbar-fixed").animate({
-          top: 0
-        });
-        $pageContainer.addClass("move-down");
-      } else if (scrollTop <= y_pos + 60) {
-        $navbar.removeClass("navbar-fixed").clearQueue().animate({
-          top: "-60px"
-        });
+  $(window).on('resize', function () {
+    windowHeight = $(document).height();
+  });
 
 
+  var fixed = false;
+  window.addEventListener('scroll', function () {
+
+    var translate = 'translateY(' + Math.round(window.pageYOffset / 2) + 'px)';
+    headerElement[0].style.transform = translate;
+    headerElement[0].style.opacity = Math.max(0, windowHeight - window.pageYOffset) / windowHeight;
 
 
-        $pageContainer.removeClass("move-down");
+    if (window.pageYOffset >= windowHeight) {
+      if (!fixed) {
+        fixed = true;
+        $('nav').addClass('fixed');
       }
-    });
-
+    }
+    else {
+      if (fixed) {
+        fixed = false;
+        $('nav').removeClass('fixed');
+      }
+    }
   });
 });
 
