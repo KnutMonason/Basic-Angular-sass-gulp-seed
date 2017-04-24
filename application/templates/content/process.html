@@ -1,56 +1,88 @@
-<h > My name is <strong>Knut Monason</strong>.</h1>
+<div class="section-content skill-wapper">
+	<div class="title">
+		<h1 class="big-text"> Skill set: </h1>
+	</div>
+	<div class="skill-segment javascript">
+		<h3>Development</h3>
 
+		<div ng-repeat="skill in jsSkills" class="skill">
+			<svg viewBox="0 0 128 128">
+				<path fill="#fff" ng-attr-d={{skill.svg}}></path>
+				<!--{{skill.fill}}-->
+			</svg>
+			<h2>{{skill.skill}}</h2>
+		</div>
+	</div>
+	<div class="skill-segment enviroment">
+		<h3>Enviroment</h3>
 
-<h1>I <strong>Design</strong> and <strong>Develop</strong> for the <strong>web.</strong></h1>
+		<div ng-repeat="skill in envSkills" class="skill">
+			<svg viewBox="0 0 128 128">
+				<path fill="#fff" ng-attr-d={{skill.svg}}></path>
+			</svg>
+			<h2>{{skill.skill}}</h2>
 
-<br>
+		</div>
+		<div class="skill">
+			<svg viewBox="0 0 128 128">
+				<circle xmlns="http://www.w3.org/2000/svg" fill="#fff" cx="63.624" cy="64.474" r="22.634" />
+				<path xmlns="http://www.w3.org/2000/svg" fill="#fff" d="M64 37h54.186c-9.944-20-30.64-33.633-54.562-33.633-19.367 0-36.619 9.173-47.764 23.271l21.123 35.748c1.032-13.906 11.017-25.316 27.017-25.386zM120.126 41h-41.832c7.403 6 12.299 13.884 12.299 23.369 0 4.663-1.183 8.631-3.268 13.631h.015l-27.757 47.511c1.335.087 2.682-.022 4.04-.022 33.609 0 60.855-27.746 60.855-61.355.001-8-1.546-15.134-4.352-23.134zM63.624 91.445c-11.672 0-21.611-7.414-25.368-17.789l-25.186-43.071c-6.505 9.686-10.303 21.345-10.303 33.889 0 30.632 22.634 55.972 52.089 60.224l20.996-36.179c-3.671 1.871-7.827 2.926-12.228 2.926z"
+				/>
+				<!--fill="#CE4E4E"-->
+			</svg>
+			<h2>DevTools</h2>
+		</div>
+		<div class="skill">
+			<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+				<defs>
+					<style>
+						.cls-1 {
+							/*fill: #8a4182;*/
+							fill: #fff;
+						}
+					</style>
+				</defs>
+				<title>jasmine-plain</title>
+				<g id="plain">
+					<polygon class="cls-1" points="68.49 52.7 59.05 52.7 56.5 49.42 56.5 23.7 70.88 23.7 70.88 49.42 68.49 52.7" />
+					<polygon class="cls-1" points="55.72 55.1 52.8 64.08 48.9 65.49 24.43 57.54 28.88 43.87 53.34 51.81 55.72 55.1" />
+					<polygon class="cls-1" points="54.04 67.74 61.68 73.29 61.81 77.43 46.7 98.25 35.06 89.8 50.19 68.98 54.04 67.74" />
+					<polygon class="cls-1" points="65.76 73.33 73.41 67.78 77.39 68.94 92.51 89.75 80.88 98.2 65.76 77.39 65.76 73.33" />
+					<polygon class="cls-1" points="74.84 64.23 71.92 55.24 74.25 51.81 98.71 43.87 103.16 57.54 78.69 65.49 74.84 64.23" />
+					<path class="cls-1" d="M64,1.41A62.59,62.59,0,1,0,126.59,64,62.59,62.59,0,0,0,64,1.41Zm-.34,111.5a49.5,49.5,0,1,1,49.5-49.5A49.5,49.5,0,0,1,63.66,112.92Z"
+					/>
+					<rect class="cls-1" x="61.58" y="82.99" width="3.92" height="19.51" />
+					<rect class="cls-1" x="90.77" y="62.35" width="3.92" height="19.51" transform="translate(-4.51 138.01) rotate(-72)" />
+					<rect class="cls-1" x="79.95" y="28.25" width="3.92" height="19.51" transform="translate(125.83 116.91) rotate(-144)" />
+					<rect class="cls-1" x="44.07" y="28.25" width="3.92" height="19.51" transform="translate(105.61 41.71) rotate(144)" />
+					<rect class="cls-1" x="32.76" y="62.35" width="3.92" height="19.51" transform="translate(92.57 16.8) rotate(72)" />
+				</g>
+			</svg>
+			<h2>Jasmine</h2>
+		</div>
+	</div>
 
+	<path class="cls-1" d="M64,1.41A62.59,62.59,0,1,0,126.59,64,62.59,62.59,0,0,0,64,1.41Zm-.34,111.5a49.5,49.5,0,1,1,49.5-49.5A49.5,49.5,0,0,1,63.66,112.92Z"></path>
 
-<h2> Currently stationed in <strong>Luleå, Sweden.</strong>
-I recently graduated with a <strong>Bachelor degree</strong> in <strong> Digital Media Production.</strong><h2>
-With the knowledge that I gained from my education and years of creative work,
-I'm now <strong>freelancing</strong> creating <strong>websites</strong> for companies both <strong>locally</strong> & <strong>globally!</strong></h2>
+	<div class="skill-segment css">
+		<h3>CSS/SCSS/HTML</h3>
 
-</div>
+		<div ng-repeat="skill in cssSkills" class="skill">
+			<svg viewBox="0 0 128 128">
+				<path fill=#fff ng-attr-d={{skill.svg}}></path>
+			</svg>
+			<h2>{{skill.skill}}</h2>
+		</div>
+	</div>
 
-<h2>Here you can read up on my 	<a href="#target2"><strong>Skillset</strong></a> <a href="#target1"><strong>Education!</strong></a></h2>
-</div>
-</div>
+	<div class="skill-segment design">
+		<h3>Prototyping/Design</h3>
 
-<h > My name is <strong>Knut Monason</strong>.</h1>
-
-
-<h1>I <strong>Design</strong> and <strong>Develop</strong> for the <strong>web.</strong></h1>
-
-<br>
-
-
-<h2> Currently stationed in <strong>Luleå, Sweden.</strong>
-I recently graduated with a <strong>Bachelor degree</strong> in <strong> Digital Media Production.</strong><h2>
-With the knowledge that I gained from my education and years of creative work,
-I'm now <strong>freelancing</strong> creating <strong>websites</strong> for companies both <strong>locally</strong> & <strong>globally!</strong></h2>
-
-</div>
-
-<h2>Here you can read up on my 	<a href="#target2"><strong>Skillset</strong></a> <a href="#target1"><strong>Education!</strong></a></h2>
-</div>
-</div>
-
-<h > My name is <strong>Knut Monason</strong>.</h1>
-
-
-<h1>I <strong>Design</strong> and <strong>Develop</strong> for the <strong>web.</strong></h1>
-
-<br>
-
-
-<h2> Currently stationed in <strong>Luleå, Sweden.</strong>
-I recently graduated with a <strong>Bachelor degree</strong> in <strong> Digital Media Production.</strong><h2>
-With the knowledge that I gained from my education and years of creative work,
-I'm now <strong>freelancing</strong> creating <strong>websites</strong> for companies both <strong>locally</strong> & <strong>globally!</strong></h2>
-
-</div>
-
-<h2>Here you can read up on my 	<a href="#target2"><strong>Skillset</strong></a> <a href="#target1"><strong>Education!</strong></a></h2>
-</div>
+		<div ng-repeat="skill in desSkills" class="skill">
+			<svg viewBox="0 0 128 128">
+				<path fill=#fff ng-attr-d={{skill.svg}}></path>
+			</svg>
+			<h2>{{skill.skill}}</h2>
+		</div>
+	</div>
 </div>
