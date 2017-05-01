@@ -8,18 +8,20 @@ $prime-color:#d94a26;
 @import "navbar";
 @import "header";
 @import "competencies";
+@import "portfolio";
 @import "skillset";
 @import "process";
 @import "mixins";
 @import "layout";
 @import "variables";
-
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -27,76 +29,71 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     color: $text-color;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
-
- .big-text {
-  font-size: 70px;
-  font-weight: 400;
-  line-height: 5px;
+    .big-text {
+        font-size: 2.8em;
+        font-weight: 400;
+        line-height: 5px;
+    }
+    h1 {
+        font-size: 2.0em;
+        font-weight: 400;
+    }
+    h2 {
+        font-size: 1.4em;
+        font-weight: 300;
+    }
+    h3 {
+        font-size: 0.8em;
+    }
+    p {
+        font-size: 1.0em;
+        font-weight: 300;
+    }
+    a {
+        text-decoration: none;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    a,
+    p {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+    .line {
+        border: 1px solid lightgrey;
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    .shadow {
+        -webkit-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
+    }
 }
 
-  h1 {
-    font-size: 2.4em;
-   font-weight: 400;
-  }
-
-  h2 {
-    font-size: 1.8em;
-    font-weight: 300;
-  }
-
-  h3 {
-     font-size: 1.2em;
-  }
-
-  p {
-     font-size: 1.4em;
-    font-weight: 300;
-  }
-
-  a {
-    text-decoration: none;
-
-  }
-  h1, h2, h3, h4, a, p {
-    -webkit-font-smoothing: subpixel-antialiased;
-  }
-
-  .line {
-    border: 1px solid lightgrey;
-    width: 100%;
-    margin: 10px 0 10px 0;
-  }
-
-  .shadow {
-    -webkit-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    7px 7px 15px 0px rgba(50, 50, 50, 0.75);
-    box-shadow:         7px 7px 15px 0px rgba(50, 50, 50, 0.75);
-    
-  }
-
+nav,
+footer {
+    display: block;
 }
-
-nav, footer {
-  display: block;
-  }
 
 main {
     position: relative;
     padding-left: 200px;
     z-index: 100;
-    background: url(/application/img/bg.png) repeat;
+    /*    background: url(/application/img/bg.png) repeat;*/
 }
 
 main section {
-  width: 100%;
-  position: relative;
-  background-color: white;
+    width: 100%;
+    position: relative;
+    background-color: white;
 }
 
 main .section-content {
-    max-width: 1000px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 15px;
@@ -105,29 +102,34 @@ main .section-content {
 }
 
 main section#compentencies {
-background: linear-gradient(#113275, darkblue);
-color: white;
+    background: linear-gradient(#113275, darkblue);
+    color: white;
 }
 
-main section#about {
-  h1 {
-    color: $prime-color;
-  }
+main section#projects {
+    background: linear-gradient(#113275, darkblue);
+    color: white;
+}
+
+main section#first {
+    h1 {
+        color: $prime-color;
+    }
 }
 
 .seperator {
-  background: linear-gradient(#113275, darkblue);
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+    background: linear-gradient(#113275, darkblue);
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     clip-path: polygon(0 0, 0 100%, 120% 80%, 100% 0);
     padding: 20px 20px 20px 20px;
 }
 
 footer {
     bottom: 0;
-    height: 400px;
+    height: 100px;
     background: linear-gradient(#113275, darkblue);
     color: $footerTypeColor;
     position: relative;
@@ -135,67 +137,54 @@ footer {
 }
 
 .logo img {
-  width: 100%;
-  height: 100%;
-/*  padding: 10px 30px 30px 30px;*/
-  margin-left: auto;
-  margin-right: auto;
+    width: 100%;
+    height: 100%;
+    /*  padding: 10px 30px 30px 30px;*/
+    margin-left: auto;
+    margin-right: auto;
 }
 
- .hole {
-  border-radius: 100px;
-  position: relative;
-  width: 30px;
-  height: 30px;
+.hole {
+    border-radius: 100px;
+    position: relative;
+    width: 30px;
+    height: 30px;
     box-shadow: -5px 5px 5px 0px rgba(0, 24, 64, 0.43);
-  
-/*  box-shadow: inset -12px 16px 16px 0px rgba(114, 114, 114, 0.32);*/
-
-   &.hole-1{
-    background-color: lightcoral;
-   }
-
-   &.hole-2{
-     background-color: lightgreen;
-     
-   }
-
-   &.hole-3{
-     background-color: lightblue;
-     
-   }
-
-   &.hole-4{
-     background-color: lightyellow;
-     
-   }
-
+    /*  box-shadow: inset -12px 16px 16px 0px rgba(114, 114, 114, 0.32);*/
+    &.hole-1 {
+        background-color: lightcoral;
+    }
+    &.hole-2 {
+        background-color: lightgreen;
+    }
+    &.hole-3 {
+        background-color: lightblue;
+    }
+    &.hole-4 {
+        background-color: lightyellow;
+    }
 }
 
 .card {
-/*  box-shadow: -12px 16px 16px 0px rgba(131, 131, 131, 0.43);*/
-  margin: 30px 0 30px 0;
-  
-/*  color: white;*/
-/*  padding: 13px 36px 13px 36px;*/
-
-  .card-text p {
-    margin: 3px 0 8px 48px;
-  }
-  .title {
-    display: flex;
-  padding: 3px 3px 3px 3px;
-
-  .hole {
-  flex: 1;
-  max-width: 30px;
-  }
-
-  h2 {
-  flex: 1;
-  margin: 0 0 0 15px;
-/*  font-weight: 500;*/
-  }
-/*  background: linear-gradient(#113275, darkblue);*/
-  }
+    /*  box-shadow: -12px 16px 16px 0px rgba(131, 131, 131, 0.43);*/
+    margin: 30px 0 30px 0;
+    /*  color: white;*/
+    /*  padding: 13px 36px 13px 36px;*/
+    .card-text p {
+        margin: 3px 0 8px 48px;
+    }
+    .title {
+        display: flex;
+        padding: 3px 3px 3px 3px;
+        .hole {
+            flex: 1;
+            max-width: 30px;
+        }
+        h2 {
+            flex: 1;
+            margin: 0 0 0 15px;
+            /*  font-weight: 500;*/
+        }
+        /*  background: linear-gradient(#113275, darkblue);*/
+    }
 }
