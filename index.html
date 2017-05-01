@@ -2,52 +2,64 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Knut Monason</title>
-  <meta name="Knut M" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="application/css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Knut Monason</title>
+    <meta name="Knut M" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="application/css/style.css">
+    <link rel="shortcut icon" href="application/img/km.ico" type="image/x-icon">
+    <link rel="icon" href="application/img/km.ico" type="image/x-icon">
 </head>
 
-<body ng-app="myApp" ng-controller="ctrl">
-  <div ng-include='"application/templates/header/header.html"'></div>
+<body ng-app="myApp" ng-controller="loadCtrl">
+    <div ng-include='"application/templates/header/header.html"'></div>
 
-  <main>
-    <div ng-include='"application/templates/navbar/navbar.html"'></div>
-    <section id="about">
-      <div class="section-content" ng-include='"application/templates/content/about.html"'> </div>
-    </section>
-    <section id="work-experience">
-      <div ng-include='"application/templates/content/work-experience.html"'></div>
-      </section>
-    <section id="compentencies">
-      <div ng-include='"application/templates/content/competencies.html"'> </div>
-    </section>
-    <section ng-controller="skillCtrl" id="skill-set">
-      <div class="section-content" ng-include='"application/templates/content/process.html"'> </div>
-    </section>
-    <section id="work">
-      <div class="section-content" ng-include='"application/templates/content/contact.html"'> </div>
-    </section>
-    <section id="contact">
-      <div class="section-content" ng-include='"application/templates/content/contact.html"'> </div>
-    </section>
-    <div ng-view></div>
-  </main>
-  <div ng-include='"application/templates/footer/footer.html"'></div>
+    <main>
+        <div ng-controller="navCtrl">
 
-  <script src="node_modules/angular/angular.js"></script>
-  <script src="node_modules/angular-route/angular-route.js"></script>
-  <script src="node_modules/angular-animate/angular-animate.js"></script>
-  <script src="node_modules/jquery/dist/jquery.js"></script>
+            <div ng-include='"application/templates/navbar/navbar.html"'></div>
+            <section id="first">
+                <div id="about" class="section-content" ng-include='"application/templates/content/about.html"'> </div>
+            </section>
+            <section id="experience">
+                <!--id="work-experience"-->
+                <div ng-include='"application/templates/content/work-experience.html"'></div>
+            </section>
+            <section id="education">
+                <!--id="compentencies"-->
+                <div ng-include='"application/templates/content/competencies.html"'> </div>
+            </section>
+            <section ng-controller="skillCtrl" id="skill-set">
+                <div class="section-content" ng-include='"application/templates/content/process.html"'> </div>
+            </section>
+            <section id="projects">
+                <!--id="portfolio"-->
+                <div ng-include='"application/templates/content/portfolio.html"'> </div>
+            </section>
+            <section id="contact">
+                <!--id="contact"-->
+                <div class="section-content" ng-include='"application/templates/content/contact.html"'> </div>
+            </section>
+            <div ng-view></div>
+        </div>
+    </main>
+    <div ng-include='"application/templates/footer/footer.html"'></div>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="application/smoothscroll.js"></script>
 
-  <!--    <script src="node_modules/skrollr/dist/skrollr.min.js"></script>
+    <!--    <script src="node_modules/skrollr/dist/skrollr.min.js"></script>
     <script type="text/javascript">
         var s = skrollr.init();
     </script>-->
-  <script src="application/app.js"></script>
+    <script src="application/app.js"></script>
+
 </body>
+
+
 
 </html>

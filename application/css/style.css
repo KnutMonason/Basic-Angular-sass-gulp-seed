@@ -19,9 +19,11 @@ nav a {
   border: none;
   padding: 0.7rem 1.4rem;
   font-size: 1rem;
-  font-weight: 400; }
+  font-weight: 400;
+  transition: all 0.3s ease; }
 
-nav a:hover, .active {
+nav a:hover,
+.active {
   background: rgba(255, 255, 255, 0.3);
   color: darkblue; }
 
@@ -36,8 +38,6 @@ nav div a i.fa-lg {
 header {
   position: relative;
   height: 100vh;
-  /*  background-image: url(https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907);*/
-  background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -47,6 +47,13 @@ header {
   clip-path: polygon(100% 0, 100% 80%, 20% 100%, 0 100%, 0 0);
   background: linear-gradient(135deg, lightcoral, #d94a26); }
 
+/*.img-wrapper {
+    background-image: url("../img/creek.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(5px) grayscale(30%);
+}*/
 .hero {
   top: 20%;
   left: 20%;
@@ -105,7 +112,7 @@ header {
 
 svg.intro {
   background: linear-gradient(#113275, darkblue);
-  max-width: 800px;
+  max-width: 700px;
   position: fixed;
   top: 40%;
   left: 50%;
@@ -115,7 +122,7 @@ svg.intro {
   svg.intro .text {
     display: none; }
   svg.intro.go .text {
-    font-size: 12px;
+    font-size: 10px;
     display: block;
     font-weight: 300; }
     svg.intro.go .text.bold {
@@ -153,6 +160,35 @@ svg.intro {
   100% {
     stroke-dashoffset: 0; } }
 
+.cases {
+  display: flex;
+  justify-content: space-between;
+  height: 440px; }
+
+.case {
+  flex: 1;
+  position: relative;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+  margin: 15px 10px 15px 10px;
+  /*max-width: 400px;*/
+  transition: all 0.1s ease;
+  width: 480px;
+  font-weight: 400;
+  height: auto; }
+  .case img {
+    width: 100%;
+    height: auto; }
+  .case .case-information {
+    height: 115px; }
+  .case.expand {
+    color: #d94a26;
+    clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0); }
+  .case.collapse {
+    color: darkblue;
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%, 0 0); }
+
 .skill-wapper {
   color: white; }
   .skill-wapper h1 {
@@ -182,7 +218,9 @@ section#skill-set {
 html {
   box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit; }
 
 body {
@@ -190,26 +228,31 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   color: #0C090A;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300; }
   body .big-text {
-    font-size: 70px;
+    font-size: 2.8em;
     font-weight: 400;
     line-height: 5px; }
   body h1 {
-    font-size: 2.4em;
+    font-size: 2.0em;
     font-weight: 400; }
   body h2 {
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-weight: 300; }
   body h3 {
-    font-size: 1.2em; }
+    font-size: 0.8em; }
   body p {
-    font-size: 1.4em;
+    font-size: 1.0em;
     font-weight: 300; }
   body a {
     text-decoration: none; }
-  body h1, body h2, body h3, body h4, body a, body p {
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body a,
+  body p {
     -webkit-font-smoothing: subpixel-antialiased; }
   body .line {
     border: 1px solid lightgrey;
@@ -220,14 +263,15 @@ body {
     -moz-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
     box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75); }
 
-nav, footer {
+nav,
+footer {
   display: block; }
 
 main {
   position: relative;
   padding-left: 200px;
   z-index: 100;
-  background: url(/application/img/bg.png) repeat; }
+  /*    background: url(/application/img/bg.png) repeat;*/ }
 
 main section {
   width: 100%;
@@ -235,7 +279,7 @@ main section {
   background-color: white; }
 
 main .section-content {
-  max-width: 1000px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
@@ -246,7 +290,11 @@ main section#compentencies {
   background: linear-gradient(#113275, darkblue);
   color: white; }
 
-main section#about h1 {
+main section#projects {
+  background: linear-gradient(#113275, darkblue);
+  color: white; }
+
+main section#first h1 {
   color: #d94a26; }
 
 .seperator {
@@ -260,7 +308,7 @@ main section#about h1 {
 
 footer {
   bottom: 0;
-  height: 400px;
+  height: 100px;
   background: linear-gradient(#113275, darkblue);
   color: white;
   position: relative;
