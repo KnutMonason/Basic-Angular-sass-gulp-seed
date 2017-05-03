@@ -2,7 +2,7 @@
 nav {
   position: absolute;
   background-color: #d94a26;
-  width: 200px;
+  width: 150px;
   top: 0;
   left: 0;
   bottom: 0;
@@ -10,7 +10,8 @@ nav {
   z-index: 200;
   overflow: auto;
   margin: 0;
-  margin-right: 40px; }
+  margin-right: 40px;
+  transition: all 0.3s ease; }
 
 nav a {
   display: block;
@@ -19,13 +20,14 @@ nav a {
   border: none;
   padding: 0.7rem 1.4rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   transition: all 0.3s ease; }
 
 nav a:hover,
 .active {
   background: rgba(255, 255, 255, 0.3);
-  color: darkblue; }
+  color: darkblue;
+  font-weight: 400; }
 
 nav div a i.fa-lg {
   font-size: 1.2rem;
@@ -160,23 +162,16 @@ svg.intro {
   100% {
     stroke-dashoffset: 0; } }
 
-.cases {
-  display: flex;
-  justify-content: space-between;
-  height: 440px; }
-
 .case {
-  flex: 1;
   position: relative;
   background-color: white;
   text-align: center;
   vertical-align: middle;
-  margin: 15px 10px 15px 10px;
+  /*    margin: 15px 10px 15px 10px;*/
   /*max-width: 400px;*/
   transition: all 0.1s ease;
-  width: 480px;
   font-weight: 400;
-  height: auto; }
+  height: 100%; }
   .case img {
     width: 100%;
     height: auto; }
@@ -190,30 +185,48 @@ svg.intro {
     clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%, 0 0); }
 
 .skill-wapper {
-  color: white; }
+  color: white;
+  /*    & .skill,
+    & svg,
+    .skill h2 {
+        display: inline;
+        vertical-align: middle;
+    }*/ }
   .skill-wapper h1 {
     color: #d94a26; }
   .skill-wapper .skill-segment {
     background-color: #d94a26;
     margin: 0px 0px 30px 0px;
-    padding: 5px 0px 50px 25px;
+    padding: 0px 0px 15px 15px;
     -webkit-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
     box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75); }
-  .skill-wapper .skill, .skill-wapper svg, .skill-wapper .skill h2 {
-    display: inline;
-    vertical-align: middle; }
   .skill-wapper .skill {
-    margin: 0 0 0 30px; }
+    /*        margin: 0 0 0 30px;*/ }
     .skill-wapper .skill svg {
-      height: 50px; }
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block; }
     .skill-wapper .skill h2 {
-      margin: 0 15px 0 10px;
-      color: white; }
+      color: white;
+      text-align: center; }
 
 section#skill-set {
   /*background: linear-gradient(coral, $prime-color);*/
   background-color: white; }
+
+.contact {
+  text-align: center; }
+  .contact h1 {
+    font-weight: 300; }
+  .contact h2 {
+    margin: 0; }
+  .contact hl {
+    color: #d94a26;
+    font-weight: 400; }
+  .contact svg {
+    max-height: 100px; }
 
 html {
   box-sizing: border-box; }
@@ -231,7 +244,7 @@ body {
   font-size: 14px;
   font-weight: 300; }
   body .big-text {
-    font-size: 2.8em;
+    font-size: 5.8em;
     font-weight: 400;
     line-height: 5px; }
   body h1 {
@@ -269,7 +282,7 @@ footer {
 
 main {
   position: relative;
-  padding-left: 200px;
+  padding-left: 150px;
   z-index: 100;
   /*    background: url(/application/img/bg.png) repeat;*/ }
 
@@ -279,7 +292,7 @@ main section {
   background-color: white; }
 
 main .section-content {
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
@@ -296,6 +309,13 @@ main section#projects {
 
 main section#first h1 {
   color: #d94a26; }
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .seperator {
   background: linear-gradient(#113275, darkblue);
@@ -314,12 +334,13 @@ footer {
   position: relative;
   z-index: 4000; }
 
-.logo img {
-  width: 100%;
-  height: 100%;
-  /*  padding: 10px 30px 30px 30px;*/
+.bio img {
+  max-width: 300px;
+  height: auto;
+  padding: 50px 0px 0px 25px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  display: block; }
 
 .hole {
   border-radius: 100px;
@@ -355,3 +376,13 @@ footer {
       flex: 1;
       margin: 0 0 0 15px;
       /*  font-weight: 500;*/ }
+
+@media screen and (max-width: 992px) {
+  nav {
+    width: 0px; }
+  main {
+    padding-left: 0px; }
+  .skill-wapper svg {
+    display: none; }
+  .section-content {
+    padding: 15px 15px 15px 15px; } }

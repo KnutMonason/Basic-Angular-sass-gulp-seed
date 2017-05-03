@@ -1,0 +1,17 @@
+.contact {
+    text-align: center;
+    h1 {
+        font-weight: 300;
+    }
+    h2,
+    h1 {
+        margin: 0;
+    }
+    hl {
+        color: $prime-color;
+        font-weight: 400;
+    }
+    svg {
+        max-height: 100px;
+    }
+}

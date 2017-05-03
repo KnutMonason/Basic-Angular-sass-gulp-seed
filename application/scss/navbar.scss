@@ -1,7 +1,7 @@
 nav {
     position: absolute;
     background-color: $prime-color;
-    width: 200px;
+    width: $nav-desktop;
     top: 0;
     left: 0;
     bottom: 0;
@@ -10,6 +10,7 @@ nav {
     overflow: auto;
     margin: 0;
     margin-right: 40px;
+    transition: all 0.3s ease;
 }
 
 nav a {
@@ -19,7 +20,7 @@ nav a {
     border: none;
     padding: 0.7rem 1.4rem;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     transition: all 0.3s ease;
 }
 
@@ -27,6 +28,7 @@ nav a:hover,
 .active {
     background: rgba(255, 255, 255, 0.3);
     color: darkblue;
+    font-weight: 400;
 }
 
 nav div a i.fa-lg {
