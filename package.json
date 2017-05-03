@@ -5,7 +5,9 @@
   "main": "app.js",
   "dependencies": {
     "angular-animate": "^1.6.4",
-    "angular-route": "^1.6.4"
+    "angular-route": "^1.6.4",
+    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap-grid": "^2.0.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

@@ -1,21 +1,13 @@
-.cases {
-    display: flex;
-    justify-content: space-between;
-    height: 440px;
-}
-
 .case {
-    flex: 1;
     position: relative;
     background-color: white;
     text-align: center;
     vertical-align: middle;
-    margin: 15px 10px 15px 10px;
+    /*    margin: 15px 10px 15px 10px;*/
     /*max-width: 400px;*/
     transition: all 0.1s ease;
-    width: 480px;
     font-weight: 400;
-    height: auto;
+    height: 100%;
     img {
         width: 100%;
         height: auto;
