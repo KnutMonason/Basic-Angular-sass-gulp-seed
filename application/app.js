@@ -190,9 +190,9 @@ app.controller('skillCtrl', function($scope) {
 
 // SMOOTH SCROLL
 
-app.controller('scrollToFirst', function($scope, $document) {
+/*app.controller('scrollToFirst', function($scope, $document) {
     var first = angular.element(document.getElementById('first'));
     $scope.toFirst = function() {
         $document.scrollToElementAnimated(first);
     }
-}).value('duScrollOffset', 30);
+}).value('duScrollOffset', 30);*/

@@ -15,28 +15,26 @@
 </head>
 
 <body ng-app="myApp" ng-controller="loadCtrl">
-    <div ng-controller="scrollToFirst">
-        <div ng-include='"application/templates/header/header.html"'></div>
+    <div ng-include='"application/templates/header/header.html"'></div>
 
-        <main>
-            <div id="first" ng-controller="navCtrl">
+    <main>
+        <div id="first" ng-controller="navCtrl">
 
-                <div ng-include='"application/templates/navbar/navbar.html"'></div>
-                <section id="about">
-                    <div class="section-content" ng-include='"application/templates/content/about.html"'> </div>
-                </section>
-                <section ng-controller="skillCtrl" id="skill-set">
-                    <div class="section-content" ng-include='"application/templates/content/skillset.html"'> </div>
-                </section>
-                <section id="projects">
-                    <!--                    <div ng-include='"application/templates/content/portfolio.html"'> </div>-->
-                    <div ng-view></div>
-                </section>
-                <section id="contact">
-                    <div class="section-content" ng-include='"application/templates/content/contact.html"'> </div>
-                </section>
-            </div>
-    </div>
+            <div ng-include='"application/templates/navbar/navbar.html"'></div>
+            <section id="about">
+                <div class="section-content" ng-include='"application/templates/content/about.html"'> </div>
+            </section>
+            <section ng-controller="skillCtrl" id="skill-set">
+                <div class="section-content" ng-include='"application/templates/content/skillset.html"'> </div>
+            </section>
+            <section id="projects">
+                <!--                    <div ng-include='"application/templates/content/portfolio.html"'> </div>-->
+                <div ng-view></div>
+            </section>
+            <section id="contact">
+                <div class="section-content" ng-include='"application/templates/content/contact.html"'> </div>
+            </section>
+        </div>
     </main>
     <div ng-include='"application/templates/footer/footer.html"'></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
