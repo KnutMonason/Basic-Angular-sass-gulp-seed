@@ -1,6 +1,45 @@
 <div class="section-content skill-wapper">
     <div class="title">
         <h1 class="big-text"> Skill set: </h1>
+        <h2> These are the <strong>tools</strong> that I use in my daily <strong>workflow</strong> ...besides <strong>pen</strong> & <strong>paper</strong></h2>
+    </div>
+
+    <!--Prototyping/Design-->
+
+    <div class="skill-segment design">
+        <div class="row">
+            <div class="col">
+                <h3>Prototyping/Design</h3>
+            </div>
+        </div>
+        <div class="row">
+
+            <div ng-repeat="skill in desSkills" class="skill col">
+                <svg viewBox="0 0 128 128">
+				<path fill="{{skill.fill}}" ng-attr-d={{skill.svg}}></path>
+			</svg>
+                <h2>{{skill.skill}}</h2>
+            </div>
+        </div>
+    </div>
+
+    <!--Markup/styling-->
+
+    <div class="skill-segment css">
+        <div class="row">
+            <div class="col">
+                <h3>CSS/SCSS/HTML</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-repeat="skill in cssSkills" class="skill col">
+                <svg viewBox="0 0 128 128">
+				<path fill="{{skill.fill}}" ng-attr-d={{skill.svg}}></path>
+			</svg>
+                <h2>{{skill.skill}}</h2>
+            </div>
+        </div>
     </div>
 
     <!--<h3>Development</h3>-->
@@ -15,7 +54,7 @@
 
             <div ng-repeat="skill in jsSkills" class="skill col">
                 <svg viewBox="0 0 128 128">
-				<path fill="#fff" ng-attr-d={{skill.svg}}></path>
+				<path fill="{{skill.fill}}" ng-attr-d={{skill.svg}}></path>
 				<!--{{skill.fill}}-->
 			</svg>
                 <h2>{{skill.skill}}</h2>
@@ -34,7 +73,7 @@
         <div class="row">
             <div ng-repeat="skill in envSkills" class="skill col">
                 <svg viewBox="0 0 128 128">
-				<path fill="#fff" ng-attr-d={{skill.svg}}></path>
+				<path fill="{{skill.fill}}" ng-attr-d={{skill.svg}}></path>
 			</svg>
                 <h2>{{skill.skill}}</h2>
 
@@ -82,41 +121,4 @@
         </div>
     </div>
 
-    <!--Markup/styling-->
-
-    <div class="skill-segment css">
-        <div class="row">
-            <div class="col">
-                <h3>CSS/SCSS/HTML</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div ng-repeat="skill in cssSkills" class="skill col">
-                <svg viewBox="0 0 128 128">
-				<path fill=#fff ng-attr-d={{skill.svg}}></path>
-			</svg>
-                <h2>{{skill.skill}}</h2>
-            </div>
-        </div>
-    </div>
-
-    <!--Prototyping/Design-->
-
-    <div class="skill-segment design">
-        <div class="row">
-            <div class="col">
-                <h3>Prototyping/Design</h3>
-            </div>
-        </div>
-        <div class="row">
-
-            <div ng-repeat="skill in desSkills" class="skill col">
-                <svg viewBox="0 0 128 128">
-				<path fill=#fff ng-attr-d={{skill.svg}}></path>
-			</svg>
-                <h2>{{skill.skill}}</h2>
-            </div>
-        </div>
-    </div>
 </div>

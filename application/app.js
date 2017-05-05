@@ -4,33 +4,35 @@ var app = angular.module('myApp', [
     'ngRoute', 'ngAnimate', 'duScroll'
 ]);
 
-app.config(['$qProvider', function($qProvider) {
-    $qProvider.errorOnUnhandledRejections(false);
-}]);
+app.config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) {
+        $routeProvider
+            .when('/project', {
+                templateUrl: 'application/templates/content/project1.html',
+                controller: 'projectCtrl'
+            })
+            .when('/project2', {
+                templateUrl: 'application/templates/content/project2.html',
+                controller: 'projectCtrl'
+            }).otherwise({
+                templateUrl: 'application/templates/content/portfolio.html',
+                controller: 'projectCtrl'
+            });
 
-app.controller('loadCtrl', ['$scope', '$window', function($scope, $window) {
-    console.log("working");
-    $scope.loading = true;
-    $window.onload = function() {
-        $scope.loading = false;
-        $(function() {
-            $('.intro').addClass('go');
-        })
-    };
-}]);
+        $locationProvider.html5Mode(true);
+    }
+]);
 
-/*  controller('MyCtrl', function($scope, $document){
- 
-).value('duScrollOffset', 30);*/
+app.controller('loadCtrl', ["$scope", function($scope) {
+    $scope.onload = function() {
+        $('.intro').addClass('go');
+        $('#active-on-load').addClass('active');
+    }
+}]);
 
 app.controller('navCtrl', function($scope, $window, $document) {
     console.log("working");
 
-    $scope.toTheTop = function() {
-        $document.scrollTopAnimated(0, 5000).then(function() {
-            console && console.log('You just scrolled to the top!');
-        });
-    }
     var first = angular.element(document.getElementById('first'));
     $scope.toFirst = function() {
         $document.scrollToElementAnimated(first);
@@ -57,14 +59,16 @@ app.controller('navCtrl', function($scope, $window, $document) {
         windowHeight = $(window).height();
 
         var translate = 'translateY(' + Math.round(window.pageYOffset / 2) + 'px)';
-        headerElement[0].style.transform = translate;
-        headerElement[0].style.opacity = Math.max(0, windowHeight - window.pageYOffset) / windowHeight;
+        if (window.pageYOffset <= 1000) {
+            headerElement[0].style.transform = translate;
+            /*Removed due to performance on smaller devices*/
+            headerElement[0].style.opacity = Math.max(0, windowHeight - window.pageYOffset) / windowHeight;
+        }
 
         if (window.pageYOffset >= windowHeight) {
             if (!fixed) {
                 fixed = true;
                 $('nav').addClass('fixed');
-                /*               $('#first').removeClass('active');*/
                 $('.social').hide();
                 $('.arrow').hide();
             }
@@ -72,7 +76,6 @@ app.controller('navCtrl', function($scope, $window, $document) {
             if (fixed) {
                 fixed = false;
                 $('nav').removeClass('fixed');
-                /*                $('#first').addClass('active');*/
                 $('.social').show();
                 $('.arrow').show();
             }
@@ -82,7 +85,6 @@ app.controller('navCtrl', function($scope, $window, $document) {
 
     window.addEventListener('scroll', function() {
         changeNavbarPosition();
-
     });
 });
 
@@ -188,14 +190,9 @@ app.controller('skillCtrl', function($scope) {
 
 // SMOOTH SCROLL
 
-/*app.controller('MyCtrl', function($scope, $document) {
-    $scope.toTheTop = function() {
-        $document.scrollTopAnimated(0, 5000).then(function() {
-            console && console.log('You just scrolled to the top!');
-        });
+app.controller('scrollToFirst', function($scope, $document) {
+    var first = angular.element(document.getElementById('first'));
+    $scope.toFirst = function() {
+        $document.scrollToElementAnimated(first);
     }
-    var section2 = angular.element(document.getElementById('section-2'));
-    $scope.toSection2 = function() {
-        $document.scrollToElementAnimated(section2);
-    }
-}).value('duScrollOffset', 30);*/
+}).value('duScrollOffset', 30);

@@ -8,44 +8,35 @@
     <meta name="Knut M" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="node_modules/bootstrap-grid/dist/grid.min.css">-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="application/css/style.css">
     <link rel="shortcut icon" href="application/img/km.ico" type="image/x-icon">
     <link rel="icon" href="application/img/km.ico" type="image/x-icon">
 </head>
 
 <body ng-app="myApp" ng-controller="loadCtrl">
-    <div ng-include='"application/templates/header/header.html"'></div>
+    <div ng-controller="scrollToFirst">
+        <div ng-include='"application/templates/header/header.html"'></div>
 
-    <main>
-        <div ng-controller="navCtrl">
+        <main>
+            <div id="first" ng-controller="navCtrl">
 
-            <div ng-include='"application/templates/navbar/navbar.html"'></div>
-            <section id="first">
-                <div id="about" class="section-content" ng-include='"application/templates/content/about.html"'> </div>
-            </section>
-            <section id="experience">
-                <!--id="work-experience"-->
-                <div ng-include='"application/templates/content/work-experience.html"'></div>
-            </section>
-            <section id="education">
-                <!--id="compentencies"-->
-                <div ng-include='"application/templates/content/competencies.html"'> </div>
-            </section>
-            <section ng-controller="skillCtrl" id="skill-set">
-                <div class="section-content" ng-include='"application/templates/content/skillset.html"'> </div>
-            </section>
-            <section id="projects">
-                <!--id="portfolio"-->
-                <div ng-include='"application/templates/content/portfolio.html"'> </div>
-            </section>
-            <section id="contact">
-                <!--id="contact"-->
-                <div class="section-content" ng-include='"application/templates/content/contact.html"'> </div>
-            </section>
-            <div ng-view></div>
-        </div>
+                <div ng-include='"application/templates/navbar/navbar.html"'></div>
+                <section id="about">
+                    <div class="section-content" ng-include='"application/templates/content/about.html"'> </div>
+                </section>
+                <section ng-controller="skillCtrl" id="skill-set">
+                    <div class="section-content" ng-include='"application/templates/content/skillset.html"'> </div>
+                </section>
+                <section id="projects">
+                    <!--                    <div ng-include='"application/templates/content/portfolio.html"'> </div>-->
+                    <div ng-view></div>
+                </section>
+                <section id="contact">
+                    <div class="section-content" ng-include='"application/templates/content/contact.html"'> </div>
+                </section>
+            </div>
+    </div>
     </main>
     <div ng-include='"application/templates/footer/footer.html"'></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
@@ -54,12 +45,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="application/smoothscroll.js"></script>
 
-    <!--    <script src="node_modules/skrollr/dist/skrollr.min.js"></script>
-    <script type="text/javascript">
-        var s = skrollr.init();
-    </script>-->
     <script src="application/app.js"></script>
-
+    <script type="text/javascript">
+        angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+    </script>
 </body>
 
 

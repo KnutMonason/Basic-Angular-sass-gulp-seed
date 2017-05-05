@@ -1,12 +1,15 @@
 $prime-blue: #2196F3;
-$text-color: #0C090A;
+$text-color: #e2e2e2;
 $nav-height: 0px;
 $footerBgColor:#575757;
 $footerTypeColor: white;
 $prime-color:#d94a26;
-$nav-desktop: 150px;
+$nav-desktop: 100px;
 $nav-small: 0px;
+$sec-color: #1d2837;
+$third-color: #233040;
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 @import "navbar";
 @import "header";
 @import "competencies";
@@ -31,24 +34,33 @@ body {
     color: $text-color;
     font-size: 14px;
     font-weight: 300;
+    overflow-x: hidden;
+    background-color: #233040;
     .big-text {
-        font-size: 5.8em;
+        font-size: 2.11em;
+    }
+    .gigantic {
+        font-size: 6.8em;
         font-weight: 400;
-        line-height: 5px;
+        line-height: 6rem;
+        text-align: center;
+    }
+    .display-serif {
+        font-family: 'Abril Fatface', cursive;
     }
     h1 {
-        font-size: 2.0em;
+        font-size: 1.8em;
         font-weight: 400;
     }
     h2 {
-        font-size: 1.4em;
+        font-size: 1.2em;
         font-weight: 300;
     }
     h3 {
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
     p {
-        font-size: 1.0em;
+        font-size: 0.8em;
         font-weight: 300;
     }
     a {
@@ -72,6 +84,12 @@ body {
         -moz-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
         box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
     }
+    .prime-colored {
+        color: $prime-color;
+    }
+    .white {
+        color: white;
+    }
 }
 
 nav,
@@ -83,13 +101,13 @@ main {
     position: relative;
     padding-left: $nav-desktop;
     z-index: 100;
-    /*    background: url(/application/img/bg.png) repeat;*/
 }
 
 main section {
     width: 100%;
     position: relative;
-    background-color: white;
+    background-color: $third-color;
+    margin-bottom: 30px;
 }
 
 main .section-content {
@@ -106,10 +124,11 @@ main section#compentencies {
     color: white;
 }
 
-main section#projects {
-    background: linear-gradient(#113275, darkblue);
+
+/*main section#projects {
+    background-color: $sub-color;
     color: white;
-}
+}*/
 
 main section#first {
     h1 {
@@ -137,20 +156,33 @@ main section#first {
 
 footer {
     bottom: 0;
-    height: 100px;
-    background: linear-gradient(#113275, darkblue);
-    color: $footerTypeColor;
+    background-color: $prime-color;
+    color: white;
     position: relative;
     z-index: 4000;
+    padding: 50px 50px 50px 150px;
 }
 
 .bio img {
     max-width: 300px;
     height: auto;
-    padding: 50px 0px 0px 25px;
+    border: white 30px solid;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    margin-top: 17px;
+}
+
+.process {
+    padding: 50px;
+    text-align: center;
+    .graphic,
+    .text {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0px 10px 0px 0px;
+        color: white;
+    }
 }
 
 .hole {
@@ -158,19 +190,15 @@ footer {
     position: relative;
     width: 30px;
     height: 30px;
-    box-shadow: -5px 5px 5px 0px rgba(0, 24, 64, 0.43);
-    /*  box-shadow: inset -12px 16px 16px 0px rgba(114, 114, 114, 0.32);*/
+    box-shadow: 4px 5px 7px -1px rgba(0, 24, 64, 0.43);
     &.hole-1 {
-        background-color: lightcoral;
+        background-color: $prime-color;
     }
     &.hole-2 {
-        background-color: lightgreen;
+        background-color: $prime-blue;
     }
     &.hole-3 {
-        background-color: lightblue;
-    }
-    &.hole-4 {
-        background-color: lightyellow;
+        background-color: mediumseagreen;
     }
 }
 
@@ -210,5 +238,8 @@ footer {
     }
     .section-content {
         padding: 15px 15px 15px 15px;
+    }
+    footer {
+        padding-left: 50px;
     }
 }

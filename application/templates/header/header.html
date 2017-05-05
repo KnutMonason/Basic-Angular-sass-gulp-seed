@@ -32,7 +32,7 @@
     <div class="img-wrapper">
     </div>
     <div class="hero">
-        <svg class="intro shadow animate-down" viewbox="0 0 200 86">
+        <svg class="intro shadow animate-down" data-ng-init="onload()" viewbox="0 0 200 86">
         <text text-anchor="start" x="10" y="30" class="text bold text-stroke" clip-path="url(#text1)">Knut Monason</text>
         <text text-anchor="start" x="10" y="50" class="text text-stroke" clip-path="url(#text2)">Fullstack Designer</text>
         <text text-anchor="start" x="10" y="70" class="text text-stroke" clip-path="url(#text3)">Creative | Design | Development</text>
@@ -55,5 +55,6 @@
 
 </header>
 <div class="arrow bounce">
-    <a class="fa fa-arrow-down fa-2x" href="#about" du-smooth-scroll du-scrollspy></a>
+    <a class="fa fa-arrow-down fa-2x" ng-click="toFirst"></a>
+    <!--    href="#first" du-smooth-scroll du-scrollspy-->
 </div>

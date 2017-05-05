@@ -1,41 +1,50 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 nav {
   position: absolute;
-  background-color: #d94a26;
-  width: 150px;
+  background-color: #1d2837;
+  width: 100px;
   top: 0;
   left: 0;
   bottom: 0;
-  /*    padding: 1.4rem 0;*/
   z-index: 200;
-  overflow: auto;
+  overflow: hidden;
   margin: 0;
   margin-right: 40px;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75); }
 
 nav a {
   display: block;
-  line-height: 1.4rem;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.4rem;
-  font-size: 1rem;
-  font-weight: 300;
-  transition: all 0.3s ease; }
+  font-weight: 400;
+  transition: all 0.3s ease;
+  width: 100px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #233040;
+  text-align: center;
+  line-height: 14px;
+  color: #E3F2FD;
+  list-style: none; }
 
 nav a:hover,
 .active {
   background: rgba(255, 255, 255, 0.3);
-  color: darkblue;
+  color: whitesmoke;
   font-weight: 400; }
-
-nav div a i.fa-lg {
-  font-size: 1.2rem;
-  vertical-align: 0;
-  margin-right: 15px; }
 
 .fixed {
   position: fixed; }
+
+.navicon {
+  /*    margin-bottom: -112px;*/ }
+
+nav div a i.fa-lg {
+  margin: 0; }
+
+.navicone {
+  font: normal normal normal 14px/1 FontAwesome; }
 
 header {
   position: relative;
@@ -78,7 +87,7 @@ header {
   margin: 0;
   padding: 1rem;
   text-align: center;
-  z-index: 200; }
+  z-index: 100; }
   .social li {
     display: inline-block;
     margin: 1.2rem; }
@@ -195,12 +204,12 @@ svg.intro {
   .skill-wapper h1 {
     color: #d94a26; }
   .skill-wapper .skill-segment {
-    background-color: #d94a26;
+    background-color: #233040;
     margin: 0px 0px 30px 0px;
-    padding: 0px 0px 15px 15px;
-    -webkit-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75); }
+    padding: 0px 15px 15px 15px;
+    -webkit-box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75);
+    -moz-box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75);
+    box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75); }
   .skill-wapper .skill {
     /*        margin: 0 0 0 30px;*/ }
     .skill-wapper .skill svg {
@@ -213,20 +222,25 @@ svg.intro {
       text-align: center; }
 
 section#skill-set {
-  /*background: linear-gradient(coral, $prime-color);*/
-  background-color: white; }
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+  background-color: #1d2837;
+  padding-bottom: 70px; }
 
 .contact {
   text-align: center; }
   .contact h1 {
     font-weight: 300; }
-  .contact h2 {
-    margin: 0; }
+  .contact h2,
+  .contact h1 {
+    margin: 0;
+    color: #e2e2e2; }
   .contact hl {
-    color: #d94a26;
+    color: white;
     font-weight: 400; }
   .contact svg {
-    max-height: 100px; }
+    max-height: 100px;
+    fill: white; }
 
 html {
   box-sizing: border-box; }
@@ -240,23 +254,30 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  color: #0C090A;
+  color: #e2e2e2;
   font-size: 14px;
-  font-weight: 300; }
+  font-weight: 300;
+  overflow-x: hidden;
+  background-color: #233040; }
   body .big-text {
-    font-size: 5.8em;
+    font-size: 2.11em; }
+  body .gigantic {
+    font-size: 6.8em;
     font-weight: 400;
-    line-height: 5px; }
+    line-height: 6rem;
+    text-align: center; }
+  body .display-serif {
+    font-family: 'Abril Fatface', cursive; }
   body h1 {
-    font-size: 2.0em;
+    font-size: 1.8em;
     font-weight: 400; }
   body h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 300; }
   body h3 {
-    font-size: 0.8em; }
+    font-size: 0.6em; }
   body p {
-    font-size: 1.0em;
+    font-size: 0.8em;
     font-weight: 300; }
   body a {
     text-decoration: none; }
@@ -275,6 +296,10 @@ body {
     -webkit-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
     box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75); }
+  body .prime-colored {
+    color: #d94a26; }
+  body .white {
+    color: white; }
 
 nav,
 footer {
@@ -282,14 +307,14 @@ footer {
 
 main {
   position: relative;
-  padding-left: 150px;
-  z-index: 100;
-  /*    background: url(/application/img/bg.png) repeat;*/ }
+  padding-left: 100px;
+  z-index: 100; }
 
 main section {
   width: 100%;
   position: relative;
-  background-color: white; }
+  background-color: #233040;
+  margin-bottom: 30px; }
 
 main .section-content {
   max-width: 1000px;
@@ -303,10 +328,10 @@ main section#compentencies {
   background: linear-gradient(#113275, darkblue);
   color: white; }
 
-main section#projects {
-  background: linear-gradient(#113275, darkblue);
-  color: white; }
-
+/*main section#projects {
+    background-color: $sub-color;
+    color: white;
+}*/
 main section#first h1 {
   color: #d94a26; }
 
@@ -328,35 +353,43 @@ main section#first h1 {
 
 footer {
   bottom: 0;
-  height: 100px;
-  background: linear-gradient(#113275, darkblue);
+  background-color: #d94a26;
   color: white;
   position: relative;
-  z-index: 4000; }
+  z-index: 4000;
+  padding: 50px 50px 50px 150px; }
 
 .bio img {
   max-width: 300px;
   height: auto;
-  padding: 50px 0px 0px 25px;
+  border: white 30px solid;
   margin-left: auto;
   margin-right: auto;
-  display: block; }
+  display: block;
+  margin-top: 17px; }
+
+.process {
+  padding: 50px;
+  text-align: center; }
+  .process .graphic,
+  .process .text {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 10px 0px 0px;
+    color: white; }
 
 .hole {
   border-radius: 100px;
   position: relative;
   width: 30px;
   height: 30px;
-  box-shadow: -5px 5px 5px 0px rgba(0, 24, 64, 0.43);
-  /*  box-shadow: inset -12px 16px 16px 0px rgba(114, 114, 114, 0.32);*/ }
+  box-shadow: 4px 5px 7px -1px rgba(0, 24, 64, 0.43); }
   .hole.hole-1 {
-    background-color: lightcoral; }
+    background-color: #d94a26; }
   .hole.hole-2 {
-    background-color: lightgreen; }
+    background-color: #2196F3; }
   .hole.hole-3 {
-    background-color: lightblue; }
-  .hole.hole-4 {
-    background-color: lightyellow; }
+    background-color: mediumseagreen; }
 
 .card {
   /*  box-shadow: -12px 16px 16px 0px rgba(131, 131, 131, 0.43);*/
@@ -385,4 +418,6 @@ footer {
   .skill-wapper svg {
     display: none; }
   .section-content {
-    padding: 15px 15px 15px 15px; } }
+    padding: 15px 15px 15px 15px; }
+  footer {
+    padding-left: 50px; } }

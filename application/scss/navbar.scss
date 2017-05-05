@@ -1,42 +1,52 @@
 nav {
     position: absolute;
-    background-color: $prime-color;
+    background-color: $sec-color;
     width: $nav-desktop;
     top: 0;
     left: 0;
     bottom: 0;
-    /*    padding: 1.4rem 0;*/
     z-index: 200;
-    overflow: auto;
+    overflow: hidden;
     margin: 0;
     margin-right: 40px;
     transition: all 0.3s ease;
+    box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75);
 }
 
 nav a {
     display: block;
-    line-height: 1.4rem;
-    color: white;
-    border: none;
-    padding: 0.7rem 1.4rem;
-    font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     transition: all 0.3s ease;
+    width: 100px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid $third-color;
+    text-align: center;
+    line-height: 14px;
+    color: #E3F2FD;
+    list-style: none;
 }
 
 nav a:hover,
 .active {
     background: rgba(255, 255, 255, 0.3);
-    color: darkblue;
+    color: whitesmoke;
     font-weight: 400;
-}
-
-nav div a i.fa-lg {
-    font-size: 1.2rem;
-    vertical-align: 0;
-    margin-right: 15px;
 }
 
 .fixed {
     position: fixed;
+}
+
+.navicon {
+    /*    margin-bottom: -112px;*/
+}
+
+nav div a i.fa-lg {
+    margin: 0;
+}
+
+.navicone {
+    font: normal normal normal 14px/1 FontAwesome;
 }
