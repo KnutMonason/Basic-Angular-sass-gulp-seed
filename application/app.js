@@ -22,7 +22,11 @@ app.config(['$routeProvider', '$locationProvider',
                 controller: 'projectCtrl'
             });
 
-        $locationProvider.html5Mode(true);
+
+
+        $locationProvider.html5Mode(false).hashPrefix('!');
+        /*        $locationProvider.hashPrefix('');*/
+
     }
 ]);
 
