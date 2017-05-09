@@ -24,7 +24,7 @@ app.config(['$routeProvider', '$locationProvider',
 
 
         /*The reason for not using html5-mode is a redirect problem that causes 404*/
-        $locationProvider.html5Mode(false).hashPrefix('!');
+        /*        $locationProvider.html5Mode(true).hashPrefix('!');*/
 
     }
 ]);
