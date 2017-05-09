@@ -8,12 +8,12 @@
         $nav-small: 0px;
         $sec-color: #1d2837;
         $third-color: #233040;
+        $bone: #e2e2e2;
         @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
         @import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
         @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
         @import "navbar";
         @import "header";
-        @import "competencies";
         @import "portfolio";
         @import "skillset";
         @import "process";
@@ -128,11 +128,6 @@
             background: linear-gradient(#113275, darkblue);
             color: white;
         }
-        /*main section#experience,*/
-        /*section#about {
-    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-}*/
         
         section#about {
             -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
@@ -193,7 +188,6 @@
         .process {
             padding: 50px;
             text-align: center;
-            /*    margin-bottom: 100px;*/
             .graphic,
             .text {
                 display: inline-block;
@@ -221,10 +215,7 @@
         }
         
         .card {
-            /*  box-shadow: -12px 16px 16px 0px rgba(131, 131, 131, 0.43);*/
             margin: 30px 0 30px 0;
-            /*  color: white;*/
-            /*  padding: 13px 36px 13px 36px;*/
             .card-text p {
                 margin: 3px 0 8px 48px;
             }
@@ -238,9 +229,7 @@
                 h2 {
                     flex: 1;
                     margin: 0 0 0 15px;
-                    /*  font-weight: 500;*/
                 }
-                /*  background: linear-gradient(#113275, darkblue);*/
             }
         }
         
@@ -259,6 +248,13 @@
             }
             footer {
                 padding-left: 0px;
+            }
+        }
+        
+        @media all and (-ms-high-contrast: none),
+        (-ms-high-contrast: active) {
+            header {
+                display: none;
             }
         }
         

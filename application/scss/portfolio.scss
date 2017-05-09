@@ -44,7 +44,6 @@
         }
         a {
             display: inline;
-            /*            font-size: 20px;*/
             padding-right: 30px;
             color: white;
             i,
@@ -59,9 +58,7 @@
     position: relative;
     height: 600px;
     background: $third-color;
-    /*    height: 40px;*/
     overflow: hidden;
-    /*    padding: 10px;*/
 }
 
 .view-animate {
@@ -73,13 +70,11 @@
     transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
     display: block;
     width: 100%;
-    /*    border-left: 1px solid black;*/
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    /*    padding: 10px;*/
 }
 
 .view-animate.ng-enter {

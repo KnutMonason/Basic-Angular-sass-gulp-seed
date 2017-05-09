@@ -24,23 +24,19 @@ nav a {
     border-bottom: 1px solid $third-color;
     text-align: center;
     line-height: 14px;
-    color: #E3F2FD;
+    color: $bone;
     list-style: none;
 }
 
 nav a:hover,
 .active {
     background: rgba(255, 255, 255, 0.3);
-    color: whitesmoke;
+    color: $bone;
     font-weight: 400;
 }
 
 .fixed {
     position: fixed;
-}
-
-.navicon {
-    /*    margin-bottom: -112px;*/
 }
 
 nav div a i.fa-lg {

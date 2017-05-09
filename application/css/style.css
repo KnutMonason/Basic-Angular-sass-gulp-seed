@@ -26,20 +26,17 @@ nav a {
   border-bottom: 1px solid #233040;
   text-align: center;
   line-height: 14px;
-  color: #E3F2FD;
+  color: #e2e2e2;
   list-style: none; }
 
 nav a:hover,
 .active {
   background: rgba(255, 255, 255, 0.3);
-  color: whitesmoke;
+  color: #e2e2e2;
   font-weight: 400; }
 
 .fixed {
   position: fixed; }
-
-.navicon {
-  /*    margin-bottom: -112px;*/ }
 
 nav div a i.fa-lg {
   margin: 0; }
@@ -59,19 +56,10 @@ header {
   clip-path: polygon(100% 0, 100% 80%, 20% 100%, 0 100%, 0 0);
   background: linear-gradient(135deg, lightcoral, #d94a26); }
 
-/*.img-wrapper {
-    background-image: url("../img/creek.jpg");
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    filter: blur(5px) grayscale(30%);
-}*/
 .hero {
   top: 20%;
   left: 20%;
-  /* bring your own prefixes */
   z-index: 90;
-  /*  position: absolute;*/
   margin: 0; }
   .hero h1,
   .hero h2 {
@@ -129,8 +117,7 @@ svg.intro {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 300;
-  /*  clip-path: polygon(100% 20%, 100% 100%, 0 100%, 0 0, 90% 0);*/ }
+  z-index: 300; }
   svg.intro .text {
     display: none; }
   svg.intro.go .text {
@@ -209,7 +196,6 @@ svg.intro {
     list-style: none; }
   .project-wrapper .project-navigation a {
     display: inline;
-    /*            font-size: 20px;*/
     padding-right: 30px;
     color: white; }
     .project-wrapper .project-navigation a i,
@@ -220,9 +206,7 @@ svg.intro {
   position: relative;
   height: 600px;
   background: #233040;
-  /*    height: 40px;*/
-  overflow: hidden;
-  /*    padding: 10px;*/ }
+  overflow: hidden; }
 
 .view-animate {
   height: 100%; }
@@ -232,13 +216,11 @@ svg.intro {
   transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
   display: block;
   width: 100%;
-  /*    border-left: 1px solid black;*/
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  /*    padding: 10px;*/ }
+  bottom: 0; }
 
 .view-animate.ng-enter {
   left: 100%; }
@@ -251,13 +233,7 @@ svg.intro {
 
 .skill-wapper {
   margin-top: 40px;
-  color: white;
-  /*    & .skill,
-    & svg,
-    .skill h2 {
-        display: inline;
-        vertical-align: middle;
-    }*/ }
+  color: white; }
   .skill-wapper h1 {
     color: #d94a26; }
   .skill-wapper .skill-segment {
@@ -267,24 +243,17 @@ svg.intro {
     -webkit-box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75);
     -moz-box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75);
     box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75); }
-  .skill-wapper .skill {
-    /*        margin: 0 0 0 30px;*/ }
-    .skill-wapper .skill svg {
-      height: 50px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block; }
-    .skill-wapper .skill h2 {
-      color: white;
-      text-align: center; }
+  .skill-wapper .skill svg {
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
+  .skill-wapper .skill h2 {
+    color: white;
+    text-align: center; }
 
 section#skill-set {
-  /*    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);*/
-  background-color: #1d2837;
-  /*    padding-bottom: 70px;
-    margin-top: 100px;
-    margin-bottom: 100px;*/ }
+  background-color: #1d2837; }
 
 .contact {
   text-align: center; }
@@ -390,11 +359,6 @@ main section#compentencies {
   background: linear-gradient(#113275, darkblue);
   color: white; }
 
-/*main section#experience,*/
-/*section#about {
-    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-}*/
 section#about {
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); }
@@ -443,8 +407,7 @@ footer {
 
 .process {
   padding: 50px;
-  text-align: center;
-  /*    margin-bottom: 100px;*/ }
+  text-align: center; }
   .process .graphic,
   .process .text {
     display: inline-block;
@@ -466,23 +429,18 @@ footer {
     background-color: mediumseagreen; }
 
 .card {
-  /*  box-shadow: -12px 16px 16px 0px rgba(131, 131, 131, 0.43);*/
-  margin: 30px 0 30px 0;
-  /*  color: white;*/
-  /*  padding: 13px 36px 13px 36px;*/ }
+  margin: 30px 0 30px 0; }
   .card .card-text p {
     margin: 3px 0 8px 48px; }
   .card .title {
     display: flex;
-    padding: 3px 3px 3px 3px;
-    /*  background: linear-gradient(#113275, darkblue);*/ }
+    padding: 3px 3px 3px 3px; }
     .card .title .hole {
       flex: 1;
       max-width: 30px; }
     .card .title h2 {
       flex: 1;
-      margin: 0 0 0 15px;
-      /*  font-weight: 500;*/ }
+      margin: 0 0 0 15px; }
 
 @media screen and (max-width: 1110px) {
   nav {
@@ -495,6 +453,10 @@ footer {
     padding: 15px 15px 15px 15px !important; }
   footer {
     padding-left: 0px; } }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  header {
+    display: none; } }
 
 @media screen and (max-width: 768px) {
   header {
