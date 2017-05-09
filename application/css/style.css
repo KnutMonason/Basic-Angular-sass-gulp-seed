@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 @import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 nav {
   position: absolute;
-  background-color: #1d2837;
+  background-color: #233040;
   width: 100px;
   top: 0;
   left: 0;
@@ -173,17 +174,18 @@ svg.intro {
 
 .case {
   position: relative;
+  padding: 0px;
+  margin: 0 20px 0 20px;
   background-color: white;
   text-align: center;
   vertical-align: middle;
-  /*    margin: 15px 10px 15px 10px;*/
-  /*max-width: 400px;*/
   transition: all 0.1s ease;
   font-weight: 400;
-  height: 100%; }
+  height: 350px;
+  width: 300px !important; }
   .case img {
     width: 100%;
-    height: auto; }
+    height: 180px; }
   .case .case-information {
     height: 115px; }
   .case.expand {
@@ -193,7 +195,62 @@ svg.intro {
     color: darkblue;
     clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%, 0 0); }
 
+.project-wrapper {
+  max-width: 1200px;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto; }
+  .project-wrapper img {
+    width: 100%;
+    height: auto; }
+  .project-wrapper .project-navigation ul {
+    padding: 0 23px 0 18px; }
+  .project-wrapper .project-navigation li {
+    list-style: none; }
+  .project-wrapper .project-navigation a {
+    display: inline;
+    /*            font-size: 20px;*/
+    padding-right: 30px;
+    color: white; }
+    .project-wrapper .project-navigation a i,
+    .project-wrapper .project-navigation a p {
+      display: inline; }
+
+.view-animate-container {
+  position: relative;
+  height: 600px;
+  background: #233040;
+  /*    height: 40px;*/
+  overflow: hidden;
+  /*    padding: 10px;*/ }
+
+.view-animate {
+  height: 100%; }
+
+.view-animate.ng-enter,
+.view-animate.ng-leave {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  display: block;
+  width: 100%;
+  /*    border-left: 1px solid black;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*    padding: 10px;*/ }
+
+.view-animate.ng-enter {
+  left: 100%; }
+
+.view-animate.ng-enter.ng-enter-active {
+  left: 0; }
+
+.view-animate.ng-leave.ng-leave-active {
+  left: -100%; }
+
 .skill-wapper {
+  margin-top: 40px;
   color: white;
   /*    & .skill,
     & svg,
@@ -222,10 +279,12 @@ svg.intro {
       text-align: center; }
 
 section#skill-set {
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+  /*    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);*/
   background-color: #1d2837;
-  padding-bottom: 70px; }
+  /*    padding-bottom: 70px;
+    margin-top: 100px;
+    margin-bottom: 100px;*/ }
 
 .contact {
   text-align: center; }
@@ -233,7 +292,7 @@ section#skill-set {
     font-weight: 300; }
   .contact h2,
   .contact h1 {
-    margin: 0;
+    margin: 0 0 30px 0;
     color: #e2e2e2; }
   .contact hl {
     color: white;
@@ -260,25 +319,28 @@ body {
   overflow-x: hidden;
   background-color: #233040; }
   body .big-text {
-    font-size: 2.11em; }
+    font-size: 2.11em;
+    padding-top: 24px; }
   body .gigantic {
     font-size: 6.8em;
     font-weight: 400;
     line-height: 6rem;
-    text-align: center; }
+    text-align: center;
+    margin-top: 150px; }
   body .display-serif {
     font-family: 'Abril Fatface', cursive; }
   body h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: 400; }
   body h2 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 300; }
   body h3 {
-    font-size: 0.6em; }
+    font-size: 0.8em; }
   body p {
-    font-size: 0.8em;
-    font-weight: 300; }
+    font-size: 1.2em;
+    font-weight: 300;
+    font-family: 'EB Garamond', serif; }
   body a {
     text-decoration: none; }
   body h1,
@@ -291,7 +353,7 @@ body {
   body .line {
     border: 1px solid lightgrey;
     width: 100%;
-    margin: 10px 0 10px 0; }
+    margin: 30px 0 0 0; }
   body .shadow {
     -webkit-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.75);
@@ -313,25 +375,33 @@ main {
 main section {
   width: 100%;
   position: relative;
-  background-color: #233040;
-  margin-bottom: 30px; }
+  background-color: #1d2837;
+  margin: 0px 0 1px 0; }
 
 main .section-content {
   max-width: 1000px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 1px 0 1px 0;
   z-index: 150; }
 
 main section#compentencies {
   background: linear-gradient(#113275, darkblue);
   color: white; }
 
-/*main section#projects {
-    background-color: $sub-color;
-    color: white;
+/*main section#experience,*/
+/*section#about {
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
 }*/
+section#about {
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); }
+
+main section#experience {
+  background-color: #233040; }
+
 main section#first h1 {
   color: #d94a26; }
 
@@ -357,20 +427,24 @@ footer {
   color: white;
   position: relative;
   z-index: 4000;
-  padding: 50px 50px 50px 150px; }
+  padding: 50px 0px 10px 100px; }
 
 .bio img {
-  max-width: 300px;
+  max-width: 230px;
   height: auto;
-  border: white 30px solid;
+  border: #e2e2e2 2px solid;
   margin-left: auto;
   margin-right: auto;
   display: block;
   margin-top: 17px; }
 
+.dots {
+  margin-bottom: 25px; }
+
 .process {
   padding: 50px;
-  text-align: center; }
+  text-align: center;
+  /*    margin-bottom: 100px;*/ }
   .process .graphic,
   .process .text {
     display: inline-block;
@@ -410,7 +484,7 @@ footer {
       margin: 0 0 0 15px;
       /*  font-weight: 500;*/ }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1110px) {
   nav {
     width: 0px; }
   main {
@@ -418,6 +492,14 @@ footer {
   .skill-wapper svg {
     display: none; }
   .section-content {
-    padding: 15px 15px 15px 15px; }
+    padding: 15px 15px 15px 15px !important; }
   footer {
-    padding-left: 50px; } }
+    padding-left: 0px; } }
+
+@media screen and (max-width: 768px) {
+  .case {
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto; }
+  .view-animate-container {
+    height: 1300px; } }
