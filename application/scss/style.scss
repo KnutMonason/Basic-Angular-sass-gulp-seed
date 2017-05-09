@@ -263,6 +263,12 @@
         }
         
         @media screen and (max-width: 768px) {
+            header {
+                display: none;
+            }
+            .gigantic {
+                font-size: 4.8em;
+            }
             .case {
                 margin-bottom: 30px;
                 margin-right: auto;
