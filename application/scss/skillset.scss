@@ -1,31 +1,35 @@
 .skill-wapper {
-    margin-top: 40px;
-    h1 {
-        color: $prime-color;
+  margin-top: 40px;
+
+  h1 {
+    color: $prime-color;
+  }
+  color: white;
+
+  .skill-segment {
+    background-color: $third-color;
+    margin: 0 0 30px;
+    padding: 0 15px 15px;
+    -webkit-box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
+    -moz-box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
+    box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
+  }
+
+  .skill {
+    svg {
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
     }
-    color: white;
-    .skill-segment {
-        background-color: $third-color;
-        margin: 0px 0px 30px 0px;
-        padding: 0px 15px 15px 15px;
-        -webkit-box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75);
-        -moz-box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75);
-        box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75);
+
+    h2 {
+      color: white;
+      text-align: center;
     }
-    .skill {
-        svg {
-            height: 50px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
-        h2 {
-            color: white;
-            text-align: center;
-        }
-    }
+  }
 }
 
 section#skill-set {
-    background-color: $sec-color;
+  background-color: $sec-color;
 }

@@ -10,10 +10,9 @@ nav {
   bottom: 0;
   z-index: 200;
   overflow: hidden;
-  margin: 0;
-  margin-right: 40px;
+  margin: 0 40px 0 0;
   transition: all 0.3s ease;
-  box-shadow: 7px 7px 15px 0px rgba(32, 33, 47, 0.75); }
+  box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75); }
 
 nav a {
   display: block;
@@ -29,8 +28,8 @@ nav a {
   color: #e2e2e2;
   list-style: none; }
 
-nav a:hover,
-.active {
+.active,
+nav a:hover {
   background: rgba(255, 255, 255, 0.3);
   color: #e2e2e2;
   font-weight: 400; }
@@ -136,9 +135,9 @@ svg.intro {
     stroke-linejoin: round;
     animation: dash 2.5s ease-in-out forwards; }
   svg.intro.go .text-stroke:nth-child(2) {
-    animation-delay: .3s; }
+    animation-delay: 0.3s; }
   svg.intro.go .text-stroke:nth-child(3) {
-    animation-delay: .9s; }
+    animation-delay: 0.9s; }
   svg.intro.go .text-stroke-2 {
     stroke: white;
     animation-delay: 1.2s; }
@@ -161,8 +160,8 @@ svg.intro {
 
 .case {
   position: relative;
-  padding: 0px;
-  margin: 0 20px 0 20px;
+  padding: 0;
+  margin: 0 20px;
   background-color: white;
   text-align: center;
   vertical-align: middle;
@@ -259,9 +258,9 @@ section#skill-set {
   text-align: center; }
   .contact h1 {
     font-weight: 300; }
-  .contact h2,
-  .contact h1 {
-    margin: 0 0 30px 0;
+  .contact h1,
+  .contact h2 {
+    margin: 0 0 30px;
     color: #e2e2e2; }
   .contact hl {
     color: white;

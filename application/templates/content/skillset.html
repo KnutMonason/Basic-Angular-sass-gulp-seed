@@ -1,95 +1,95 @@
 <div class="section-content skill-wapper">
-    <div class="title">
-        <p> These are the <strong>tools</strong> and experiences that I use in my daily workflow, besides pen & paper</p>
+  <div class="title">
+    <p> These are the <strong>tools</strong> and experiences that I use in my daily workflow, besides pen & paper</p>
+  </div>
+
+  <!--Prototyping/Design-->
+
+  <div class="skill-segment design">
+    <div class="row">
+      <div class="col">
+        <h3>Prototyping/Design</h3>
+      </div>
     </div>
+    <div class="row">
 
-    <!--Prototyping/Design-->
-
-    <div class="skill-segment design">
-        <div class="row">
-            <div class="col">
-                <h3>Prototyping/Design</h3>
-            </div>
-        </div>
-        <div class="row">
-
-            <div ng-repeat="skill in desSkills" class="skill col">
-                <svg viewBox="0 0 128 128">
+      <div ng-repeat="skill in desSkills" class="skill col">
+        <svg viewBox="0 0 128 128">
 				<path fill="{{skill.fill}}" ng-attr-d={{skill.svg}}></path>
 			</svg>
-                <h2>{{skill.skill}}</h2>
-            </div>
-        </div>
+        <h2>{{skill.skill}}</h2>
+      </div>
+    </div>
+  </div>
+
+  <!--Markup/styling-->
+
+  <div class="skill-segment css">
+    <div class="row">
+      <div class="col">
+        <h3>HTML/CSS/Preprocessors</h3>
+      </div>
     </div>
 
-    <!--Markup/styling-->
-
-    <div class="skill-segment css">
-        <div class="row">
-            <div class="col">
-                <h3>HTML/CSS/Preprocessors</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div ng-repeat="skill in cssSkills" class="skill col">
-                <svg viewBox="0 0 128 128">
+    <div class="row">
+      <div ng-repeat="skill in cssSkills" class="skill col">
+        <svg viewBox="0 0 128 128">
 				<path fill="{{skill.fill}}" ng-attr-d={{skill.svg}}></path>
 			</svg>
-                <h2>{{skill.skill}}</h2>
-            </div>
-        </div>
+        <h2>{{skill.skill}}</h2>
+      </div>
+    </div>
+  </div>
+
+  <!--<h3>Development</h3>-->
+  <div class="skill-segment javascript">
+    <div class="row">
+      <div class="col">
+        <h3>Development</h3>
+      </div>
     </div>
 
-    <!--<h3>Development</h3>-->
-    <div class="skill-segment javascript">
-        <div class="row">
-            <div class="col">
-                <h3>Development</h3>
-            </div>
-        </div>
+    <div class="row">
 
-        <div class="row">
-
-            <div ng-repeat="skill in jsSkills" class="skill col">
-                <svg viewBox="0 0 128 128">
+      <div ng-repeat="skill in jsSkills" class="skill col">
+        <svg viewBox="0 0 128 128">
 				<path fill="{{skill.fill}}" ng-attr-d={{skill.svg}}></path>
 				<!--{{skill.fill}}-->
 			</svg>
-                <h2>{{skill.skill}}</h2>
-            </div>
-        </div>
+        <h2>{{skill.skill}}</h2>
+      </div>
     </div>
+  </div>
 
 
-    <!--Enviroment-->
-    <div class="skill-segment enviroment">
-        <div class="row">
-            <div class="col">
-                <h3>Enviroment</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div ng-repeat="skill in envSkills" class="skill col">
-                <svg viewBox="0 0 128 128">
+  <!--Enviroment-->
+  <div class="skill-segment enviroment">
+    <div class="row">
+      <div class="col">
+        <h3>Enviroment</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div ng-repeat="skill in envSkills" class="skill col">
+        <svg viewBox="0 0 128 128">
 				<path fill="{{skill.fill}}" ng-attr-d={{skill.svg}}></path>
 			</svg>
-                <h2>{{skill.skill}}</h2>
+        <h2>{{skill.skill}}</h2>
 
-            </div>
+      </div>
 
 
-            <div class="skill col">
-                <svg viewBox="0 0 128 128">
+      <div class="skill col">
+        <svg viewBox="0 0 128 128">
 				<circle xmlns="http://www.w3.org/2000/svg" fill="#fff" cx="63.624" cy="64.474" r="22.634" />
 				<path xmlns="http://www.w3.org/2000/svg" fill="#fff" d="M64 37h54.186c-9.944-20-30.64-33.633-54.562-33.633-19.367 0-36.619 9.173-47.764 23.271l21.123 35.748c1.032-13.906 11.017-25.316 27.017-25.386zM120.126 41h-41.832c7.403 6 12.299 13.884 12.299 23.369 0 4.663-1.183 8.631-3.268 13.631h.015l-27.757 47.511c1.335.087 2.682-.022 4.04-.022 33.609 0 60.855-27.746 60.855-61.355.001-8-1.546-15.134-4.352-23.134zM63.624 91.445c-11.672 0-21.611-7.414-25.368-17.789l-25.186-43.071c-6.505 9.686-10.303 21.345-10.303 33.889 0 30.632 22.634 55.972 52.089 60.224l20.996-36.179c-3.671 1.871-7.827 2.926-12.228 2.926z"
 				/>
 				<!--fill="#CE4E4E"-->
 			</svg>
-                <h2>DevTools</h2>
-            </div>
-            <div class="skill col">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+        <h2>DevTools</h2>
+      </div>
+      <div class="skill col">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
 				<defs>
 					<style>
 						.cls-1 {
@@ -114,10 +114,10 @@
 					<rect class="cls-1" x="32.76" y="62.35" width="3.92" height="19.51" transform="translate(92.57 16.8) rotate(72)" />
 				</g>
 			</svg>
-                <h2>Jasmine</h2>
-                <path class="cls-1" d="M64,1.41A62.59,62.59,0,1,0,126.59,64,62.59,62.59,0,0,0,64,1.41Zm-.34,111.5a49.5,49.5,0,1,1,49.5-49.5A49.5,49.5,0,0,1,63.66,112.92Z"></path>
-            </div>
-        </div>
+        <h2>Jasmine</h2>
+        <path class="cls-1" d="M64,1.41A62.59,62.59,0,1,0,126.59,64,62.59,62.59,0,0,0,64,1.41Zm-.34,111.5a49.5,49.5,0,1,1,49.5-49.5A49.5,49.5,0,0,1,63.66,112.92Z"></path>
+      </div>
     </div>
+  </div>
 
 </div>
