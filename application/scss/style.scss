@@ -1,22 +1,23 @@
-$prime-blue: #2196F3;
+$prime-blue: #205AA9;
 $text-color: #e2e2e2;
-$nav-height: 0;
-$footerBgColor: #575757;
-$footerTypeColor: white;
-$prime-color: #d94a26;
-$nav-desktop: 100px;
-$nav-small: 0;
-$sec-color: #1d2837;
+$dark-blue: #123561;
+$border: 1em solid white;
+$sec-color: #2971D4;
 $third-color: #233040;
 $bone: #e2e2e2;
+$nav-height: 0;
+$prime-color: #FFB300;
+$nav-desktop: 8em;
+$nav-small: 0;
+$footerBgColor: $dark-blue;
+$footerTypeColor: white;
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
-@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+@import url(https://fonts.googleapis.com/css?family=Vidaloka);
 @import "navbar";
 @import "header";
 @import "portfolio";
 @import "skillset";
-@import "contact";
 html {
     box-sizing: border-box;
 }
@@ -35,20 +36,13 @@ body {
     font-size: 14px;
     font-weight: 300;
     overflow-x: hidden;
-    background-color: $third-color;
+    background-color: white;
     .big-text {
         font-size: 2.11em;
         padding-top: 24px;
     }
-    .gigantic {
-        font-size: 6.8em;
-        font-weight: 400;
-        line-height: 6rem;
-        text-align: center;
-        margin-top: 150px;
-    }
     .display-serif {
-        font-family: 'Abril Fatface', cursive;
+        font-family: 'Vidaloka', serif;
     }
     h1 {
         font-size: 1.6em;
@@ -59,7 +53,7 @@ body {
         font-weight: 300;
     }
     h3 {
-        font-size: 0.8em;
+        font-size: 1em;
     }
     p {
         font-size: 1.2em;
@@ -95,6 +89,11 @@ body {
     }
 }
 
+.hidden {
+    display: none;
+    transition: all 0.3s ease;
+}
+
 footer,
 nav {
     display: block;
@@ -109,13 +108,14 @@ main {
 main section {
     width: 100%;
     position: relative;
-    background-color: $sec-color;
-    margin: 0 0 1px;
+    background-color: $prime-blue;
+    /*    margin: 0 0 1px;*/
+    padding: 2em 0 7em 0;
 }
 
 main .section-content {
     max-width: 1000px;
-    margin-bottom: 30px;
+    /*    margin-bottom: 30px;*/
     margin-left: auto;
     margin-right: auto;
     padding: 1px 0;
@@ -128,12 +128,13 @@ main section#compentencies {
 }
 
 section#about {
-    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 }
 
 main section#experience {
-    background-color: $third-color;
+    background-color: white;
+    color: $prime-blue;
 }
 
 main section#first {
@@ -150,26 +151,60 @@ main section#first {
     user-select: none;
 }
 
-.seperator {
-    background: linear-gradient(#113275, darkblue);
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
+.title {
     text-align: center;
-    clip-path: polygon(0 0, 0 100%, 120% 80%, 100% 0);
-    padding: 20px;
+}
+
+.seperator {
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    .gigantic {
+        margin: 1em auto 1em auto;
+        max-width: 15em;
+        font-size: 6.8em;
+        font-weight: 400;
+        line-height: 7rem;
+        text-align: center;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-size: cover;
+        background-image: url("../img/text-bg.png");
+    }
 }
 
 footer {
     bottom: 0;
-    background-color: $prime-color;
-    color: white;
+    background-color: $footerBgColor;
+    color: $footerTypeColor;
     position: relative;
     z-index: 4000;
     padding: 50px 0 10px 100px;
+    text-align: center;
+    h1 {
+        font-weight: 300;
+    }
+    h1,
+    h2 {
+        margin: 0 0 30px;
+    }
+    hl {
+        font-weight: 400;
+    }
+    svg {
+        max-height: 100px;
+        fill: $footerTypeColor;
+    }
+    a {
+        color: $footerTypeColor;
+    }
 }
 
-.bio img {
+.bio {
+    margin-top: 10em;
+}
+
+.bio-img-container img {
     max-width: 230px;
     height: auto;
     border: #e2e2e2 2px solid;
@@ -181,6 +216,11 @@ footer {
 
 .dots {
     margin-bottom: 25px;
+}
+
+.experience-text,
+.experience-dot {
+    display: inline-block;
 }
 
 .process {
@@ -205,7 +245,7 @@ footer {
         background-color: $prime-color;
     }
     &.hole-2 {
-        background-color: $prime-blue;
+        background-color: $sec-color;
     }
     &.hole-3 {
         background-color: mediumseagreen;

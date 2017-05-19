@@ -2,7 +2,8 @@
     margin-top: 40px;
     color: white;
     .skill-segment {
-        background-color: $third-color;
+        color: $prime-blue;
+        background-color: white;
         margin: 0 0 30px;
         padding: 0 15px 15px;
         -webkit-box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
@@ -17,12 +18,13 @@
             display: block;
         }
         h2 {
-            color: white;
+            color: $prime-blue;
             text-align: center;
         }
     }
 }
 
 section#skill-set {
-    background-color: $sec-color;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 }

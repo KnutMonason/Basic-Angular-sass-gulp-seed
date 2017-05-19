@@ -1,156 +1,174 @@
+$arrow-color: $prime-blue;
 header {
-  position: relative;
-  height: 100vh;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  clip-path: polygon(100% 0, 100% 80%, 20% 100%, 0 100%, 0 0);
-  background: linear-gradient(135deg, lightcoral, $prime-color);
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    clip-path: polygon(100% 0, 100% 80%, 20% 100%, 0 100%, 0 0);
+    background-image: url("../img/desktopbg.png");
+    background-size: cover;
+    border-left: $border;
+    border-right: $border;
+    border-top: $border;
 }
 
-.hero {
-  top: 20%;
-  left: 20%;
-  z-index: 90;
-  margin: 0;
+.logo,
+.social {
+    top: 0;
+    position: fixed;
+    display: block;
+    z-index: 100;
+    padding: 3.5em;
+}
 
-  h1,
-  h2 {
-    color: white;
-    margin: 0;
-  }
+.logo img {
+    height: 2em;
 }
 
 .social {
-  top: 0;
-  right: 0;
-  position: fixed;
-  display: block;
-  font-size: 0;
-  list-style: none;
-  margin: 0;
-  padding: 1rem;
-  text-align: center;
-  z-index: 100;
-
-  li {
-    display: inline-block;
-    margin: 1.2rem;
-  }
-
-  a,
-  svg {
-    display: block;
-    fill: white;
-    color: white;
-  }
-
-  a {
-    height: 1.7rem;
-    width: 1.7rem;
-
-    svg {
-      height: 100%;
-      width: 100%;
+    right: 0;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    z-index: 100;
+    li {
+        display: inline-block;
+        margin: 1.2rem;
     }
-  }
-
-  li:hover {
-    border-radius: 100%;
-    background: lightcoral;
-    color: black;
-    fill: black;
-    transform: scale(1.25);
-    transition: background-color 0.2s, transform 0.2s ease-out;
-  }
+    a,
+    svg {
+        display: block;
+        fill: $bone;
+        color: $bone;
+    }
+    a {
+        height: 1.7rem;
+        width: 1.7rem;
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    li:hover {
+        border-radius: 100%;
+        background: $prime-color;
+        color: black;
+        fill: black;
+        transform: scale(1.25);
+        transition: background-color 0.2s, transform 0.2s ease-out;
+    }
 }
 
 .arrow {
-  position: fixed;
-  bottom: 1px;
-  right: 3%;
-  text-align: center;
-  margin: 5% 0;
-  z-index: 60;
-
-  & a {
-    color: $prime-color;
-    text-decoration: none;
-  }
+    position: fixed;
+    bottom: -2em;
+    right: 8.3em;
+    text-align: center;
+    margin: 5% 0;
+    z-index: 60;
+    transition: all 0.3ms ease;
+    & a {
+        color: $arrow-color;
+        text-decoration: none;
+    }
 }
 
-svg.intro {
-  background: linear-gradient(#113275, darkblue);
-  max-width: 700px;
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 300;
-
-  .text {
-    display: none;
-  }
-
-  &.go {
-    .text {
-      font-size: 10px;
-      display: block;
-      font-weight: 300;
-
-      &.bold {
-        font-weight: 500 !important;
-      }
+.arrow:hover {
+    a {
+        color: $prime-color;
     }
-
-    .text-stroke {
-      fill: none;
-      stroke: #E66A5C;
-      stroke-width: 2.8px;
-      stroke-dashoffset: -900;
-      stroke-dasharray: 900;
-      stroke-linecap: butt;
-      stroke-linejoin: round;
-      animation: dash 2.5s ease-in-out forwards;
-    }
-
-    .text-stroke:nth-child(2) {
-      animation-delay: 0.3s;
-    }
-
-    .text-stroke:nth-child(3) {
-      animation-delay: 0.9s;
-    }
-
-    .text-stroke-2 {
-      stroke: white;
-      animation-delay: 1.2s;
-    }
-
-    .text-stroke:nth-child(5) {
-      animation-delay: 1.5s;
-    }
-
-    .text-stroke:nth-child(6) {
-      animation-delay: 1.8s;
-    }
-  }
 }
 
-.animate-down {
-  animation: down 1.5s ease-in-out forwards;
-}
-@keyframes down {
-  0% {
-    opacity: 0;
-    top: -400px;
-  }
-}
-@keyframes dash {
-  100% {
-    stroke-dashoffset: 0;
-  }
+header {
+    .landing-text {
+        text-align: center;
+        /*        position: fixed;*/
+        z-index: 300;
+        .img-container {
+            padding: 0 0 1em 0;
+            margin: auto;
+            img {
+                width: 8.5em;
+            }
+        }
+    }
+    .design-text,
+    .development-text,
+    .and-text {
+        font-family: 'Vidaloka', serif;
+        margin: 0;
+        line-height: 1em;
+    }
+    .development-text {
+        font-size: 4.24em;
+        color: $dark-blue;
+    }
+    .intro-text {
+        font-size: 2em;
+        margin-top: 0.5em;
+        font-family: 'EB Garamond', serif;
+    }
+    .design-text,
+    .and-text {
+        font-size: 7em;
+    }
+    .design-text {
+        color: white;
+    }
+    .and-text {
+        color: $prime-color;
+    }
+    .first-row {
+        padding: 0;
+    }
+    .design-text,
+    .and-text {
+        display: inline-block !important;
+        padding: 0;
+    }
+    .landing-button {
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 45px;
+        margin: 2em auto 2em;
+        max-width: 160px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        svg {
+            height: 45px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        rect {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 5;
+            stroke-dasharray: 422, 0;
+        }
+    }
+    .landing-button:hover {
+        letter-spacing: 1px;
+        color: $prime-color;
+        rect {
+            stroke: $prime-color;
+            stroke-width: 5;
+            stroke-dasharray: 15, 310;
+            stroke-dashoffset: 48;
+            transition: all 1.35s cubic-bezier(0.5, 1, 0.5, 1);
+        }
+    }
 }

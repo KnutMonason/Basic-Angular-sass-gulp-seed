@@ -1,47 +1,48 @@
 nav {
-  position: absolute;
-  background-color: $third-color;
-  width: $nav-desktop;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 200;
-  overflow: hidden;
-  margin: 0 40px 0 0;
-  transition: all 0.3s ease;
-  box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
+    position: absolute;
+    background-color: $sec-color;
+    width: $nav-desktop;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    overflow: hidden;
+    margin: 0 40px 0 0;
+    transition: all 0.3s ease;
+    box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.35);
+    font-size: 1em;
 }
 
 nav a {
-  display: block;
-  font-weight: 400;
-  transition: all 0.3s ease;
-  width: 100px;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 1px solid $third-color;
-  text-align: center;
-  line-height: 14px;
-  color: $bone;
-  list-style: none;
+    display: block;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    width: $nav-desktop;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid $bone;
+    text-align: center;
+    line-height: 14px;
+    color: $bone;
+    list-style: none;
 }
 
 .active,
 nav a:hover {
-  background: rgba(255, 255, 255, 0.3);
-  color: $bone;
-  font-weight: 400;
+    background: rgba(255, 255, 255, 0.3);
+    color: $bone;
+    font-weight: 400;
 }
 
 .fixed {
-  position: fixed;
+    position: fixed;
 }
 
 nav div a i.fa-lg {
-  margin: 0;
+    margin: 0;
 }
 
 .navicone {
-  font: normal normal normal 14px/1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
 }

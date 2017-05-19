@@ -21,7 +21,7 @@
         clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
     }
     &.collapse {
-        color: $third-color;
+        color: $prime-blue;
         clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%, 0 0);
     }
 }
@@ -71,12 +71,13 @@
 .view-animate-container {
     position: relative;
     height: 600px;
-    background: $third-color;
+    background: $prime-blue;
     overflow: hidden;
 }
 
 .view-animate {
     height: 100%;
+    padding: 2em 0 7em 0;
 }
 
 .view-animate.ng-enter,
