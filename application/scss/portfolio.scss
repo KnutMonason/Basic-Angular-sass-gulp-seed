@@ -2,7 +2,7 @@
     position: relative;
     padding: 0px;
     margin: 0 20px 0 20px;
-    background-color: white;
+    background-color: $prime-blue;
     text-align: center;
     vertical-align: middle;
     transition: all 0.1s ease;
@@ -21,19 +21,23 @@
         clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
     }
     &.collapse {
-        color: $prime-blue;
+        color: white;
         clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%, 0 0);
     }
 }
 
 .more-work {
-    color: white;
     text-align: center;
     margin-top: 30px;
     display: block;
     -webkit-transition: -webkit-all 0.1s;
     -moz-transition: -moz-all 0.1s;
     transition: all 0.1s;
+    color: $prime-blue;
+}
+
+.portfolio-title-text {
+    color: $prime-blue;
 }
 
 .more-work:hover {
@@ -45,6 +49,12 @@
     padding: 50px;
     margin-left: auto;
     margin-right: auto;
+    a,
+    p,
+    h1,
+    h2 {
+        color: $dark-blue;
+    }
     img {
         width: 100%;
         height: auto;
@@ -59,7 +69,6 @@
         a {
             display: inline;
             padding-right: 30px;
-            color: white;
             i,
             p {
                 display: inline;
@@ -71,7 +80,7 @@
 .view-animate-container {
     position: relative;
     height: 600px;
-    background: $prime-blue;
+    background: white;
     overflow: hidden;
     padding: 0;
 }

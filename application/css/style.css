@@ -200,7 +200,7 @@ header .landing-button:hover {
   position: relative;
   padding: 0px;
   margin: 0 20px 0 20px;
-  background-color: white;
+  background-color: #205AA9;
   text-align: center;
   vertical-align: middle;
   transition: all 0.1s ease;
@@ -216,17 +216,20 @@ header .landing-button:hover {
     color: #FFB300;
     clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0); }
   .case.collapse {
-    color: #205AA9;
+    color: white;
     clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%, 0 0); }
 
 .more-work {
-  color: white;
   text-align: center;
   margin-top: 30px;
   display: block;
   -webkit-transition: -webkit-all 0.1s;
   -moz-transition: -moz-all 0.1s;
-  transition: all 0.1s; }
+  transition: all 0.1s;
+  color: #205AA9; }
+
+.portfolio-title-text {
+  color: #205AA9; }
 
 .more-work:hover {
   color: #FFB300; }
@@ -236,6 +239,11 @@ header .landing-button:hover {
   padding: 50px;
   margin-left: auto;
   margin-right: auto; }
+  .project-wrapper a,
+  .project-wrapper p,
+  .project-wrapper h1,
+  .project-wrapper h2 {
+    color: #123561; }
   .project-wrapper img {
     width: 100%;
     height: auto; }
@@ -245,8 +253,7 @@ header .landing-button:hover {
     list-style: none; }
   .project-wrapper .project-navigation a {
     display: inline;
-    padding-right: 30px;
-    color: white; }
+    padding-right: 30px; }
     .project-wrapper .project-navigation a i,
     .project-wrapper .project-navigation a p {
       display: inline; }
@@ -254,7 +261,7 @@ header .landing-button:hover {
 .view-animate-container {
   position: relative;
   height: 600px;
-  background: #205AA9;
+  background: white;
   overflow: hidden;
   padding: 0; }
 
@@ -357,8 +364,6 @@ body {
     -webkit-box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.75);
     box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.75); }
-  body .prime-colored {
-    color: #FFB300; }
   body .white {
     color: white; }
 
@@ -379,20 +384,18 @@ main section {
   width: 100%;
   position: relative;
   background-color: #205AA9;
-  /*    margin: 0 0 1px;*/
   padding: 2em 0 7em 0; }
 
 main .section-content {
   max-width: 1000px;
-  /*    margin-bottom: 30px;*/
   margin-left: auto;
   margin-right: auto;
   padding: 1px 0;
   z-index: 150; }
 
-main section#compentencies {
-  background: linear-gradient(#113275, darkblue);
-  color: white; }
+main section#contact {
+  background-color: white;
+  padding: 1em 0 1em 0; }
 
 section#about {
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);

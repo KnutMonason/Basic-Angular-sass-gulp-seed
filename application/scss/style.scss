@@ -82,9 +82,6 @@
             -moz-box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.75);
             box-shadow: 7px 7px 15px 0 rgba(50, 50, 50, 0.75);
         }
-        .prime-colored {
-            color: $prime-color;
-        }
         .white {
             color: white;
         }
@@ -110,22 +107,20 @@
         width: 100%;
         position: relative;
         background-color: $prime-blue;
-        /*    margin: 0 0 1px;*/
         padding: 2em 0 7em 0;
     }
     
     main .section-content {
         max-width: 1000px;
-        /*    margin-bottom: 30px;*/
         margin-left: auto;
         margin-right: auto;
         padding: 1px 0;
         z-index: 150;
     }
     
-    main section#compentencies {
-        background: linear-gradient(#113275, darkblue);
-        color: white;
+    main section#contact {
+        background-color: white;
+        padding: 1em 0 1em 0;
     }
     
     section#about {
