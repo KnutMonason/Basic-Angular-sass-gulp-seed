@@ -255,11 +255,11 @@ header .landing-button:hover {
   position: relative;
   height: 600px;
   background: #205AA9;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 0; }
 
 .view-animate {
-  height: 100%;
-  padding: 2em 0 7em 0; }
+  height: 100%; }
 
 .view-animate.ng-enter,
 .view-animate.ng-leave {
@@ -306,7 +306,8 @@ section#skill-set {
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%); }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 *,
 *:after,
@@ -506,12 +507,17 @@ footer {
     padding-left: 0; } }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  header {
-    display: none; } }
+  .gigantic {
+    background-image: none !important; } }
 
 @media screen and (max-width: 768px) {
   header {
-    display: none; }
+    border: none; }
+    header .design-text,
+    header .and-text {
+      font-size: 4em; }
+    header .development-text {
+      font-size: 2.24em; }
   .gigantic {
     font-size: 2.8em !important; }
   .case {
@@ -519,4 +525,10 @@ footer {
     margin-right: auto;
     margin-left: auto; }
   .view-animate-container {
-    height: 1300px; } }
+    height: 100%;
+    min-height: 600px; }
+  .project-wrapper {
+    padding: 20px;
+    height: 500px; }
+  .ng-animate.ng-enter {
+    height: 600px; } }

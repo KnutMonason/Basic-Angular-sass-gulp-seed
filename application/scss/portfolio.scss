@@ -73,11 +73,11 @@
     height: 600px;
     background: $prime-blue;
     overflow: hidden;
+    padding: 0;
 }
 
 .view-animate {
     height: 100%;
-    padding: 2em 0 7em 0;
 }
 
 .view-animate.ng-enter,
