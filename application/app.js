@@ -37,7 +37,6 @@ app.controller('loadCtrl', ["$scope", function($scope) {
 }]);
 
 app.controller('navCtrl', function($scope, $window, $document) {
-    console.log("working");
 
     var first = angular.element(document.getElementById('first'));
     $scope.toFirst = function() {

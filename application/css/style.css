@@ -511,6 +511,11 @@ footer {
     background-image: none !important; } }
 
 @media screen and (max-width: 768px) {
+  * {
+    clip-path: none !important; }
+  .logo,
+  .arrow {
+    display: none; }
   header {
     border: none; }
     header .design-text,
