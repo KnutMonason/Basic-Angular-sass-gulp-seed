@@ -4,8 +4,8 @@
     .skill-segment {
         color: $prime-blue;
         background-color: white;
-        margin: 0 0 30px;
-        padding: 0 15px 15px;
+        margin: 0 0 15px;
+        padding: 0px 10px 10px;
         -webkit-box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
         -moz-box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
         box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
@@ -25,6 +25,7 @@
 }
 
 section#skill-set {
-    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+    padding: 1em 0 7em 0;
 }

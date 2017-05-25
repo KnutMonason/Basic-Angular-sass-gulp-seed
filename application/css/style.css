@@ -208,8 +208,7 @@ header .landing-button:hover {
   height: 350px;
   width: 300px !important; }
   .case img {
-    width: 100%;
-    height: 180px; }
+    width: 100%; }
   .case .case-information {
     height: 115px; }
   .case.expand {
@@ -221,7 +220,7 @@ header .landing-button:hover {
 
 .more-work {
   text-align: center;
-  margin-top: 30px;
+  margin-bottom: 3em;
   display: block;
   -webkit-transition: -webkit-all 0.1s;
   -moz-transition: -moz-all 0.1s;
@@ -229,7 +228,12 @@ header .landing-button:hover {
   color: #205AA9; }
 
 .portfolio-title-text {
-  color: #205AA9; }
+  /*    color: $prime-blue;*/
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: cover;
+  background-image: url(../img/text-bg.png); }
 
 .more-work:hover {
   color: #FFB300; }
@@ -294,8 +298,8 @@ header .landing-button:hover {
   .skill-wapper .skill-segment {
     color: #205AA9;
     background-color: white;
-    margin: 0 0 30px;
-    padding: 0 15px 15px;
+    margin: 0 0 15px;
+    padding: 0px 10px 10px;
     -webkit-box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
     -moz-box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75);
     box-shadow: 7px 7px 15px 0 rgba(32, 33, 47, 0.75); }
@@ -309,8 +313,69 @@ header .landing-button:hover {
     text-align: center; }
 
 section#skill-set {
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%); }
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+  padding: 1em 0 7em 0; }
+
+footer {
+  display: block;
+  bottom: 0;
+  background-color: #205AA9;
+  color: white;
+  position: relative;
+  z-index: 4000;
+  text-align: center; }
+  footer h1 {
+    font-weight: 300; }
+  footer h1,
+  footer h2 {
+    margin: 0 0 30px; }
+  footer hl {
+    font-weight: 400; }
+  footer svg {
+    height: 1.5em;
+    fill: white; }
+  footer a {
+    color: white; }
+  footer .footer-logo {
+    height: 1.5em; }
+  footer .footer-credits,
+  footer .footer-logo,
+  footer .footer-credits-container {
+    margin: auto;
+    padding: 0em 1em 0em 0em;
+    display: inline;
+    vertical-align: middle; }
+  footer .social-footer {
+    margin: auto;
+    list-style: none;
+    text-align: center;
+    z-index: 100; }
+    footer .social-footer li {
+      display: inline-block;
+      margin: 1.2rem; }
+    footer .social-footer a,
+    footer .social-footer svg {
+      display: block;
+      fill: #e2e2e2;
+      color: #e2e2e2; }
+    footer .social-footer a {
+      height: 1.7rem;
+      width: 1.7rem; }
+      footer .social-footer a svg {
+        height: 100%;
+        width: 100%; }
+    footer .social-footer li:hover {
+      border-radius: 100%;
+      background: #FFB300;
+      color: black;
+      fill: black;
+      transform: scale(1.25);
+      transition: background-color 0.2s, transform 0.2s ease-out; }
+
+.contact {
+  text-align: center;
+  color: #205AA9; }
 
 html {
   box-sizing: border-box;
@@ -371,7 +436,6 @@ body {
   display: none;
   transition: all 0.3s ease; }
 
-footer,
 nav {
   display: block; }
 
@@ -383,23 +447,25 @@ main {
 main section {
   width: 100%;
   position: relative;
-  background-color: #205AA9;
-  padding: 2em 0 7em 0; }
+  background-color: white; }
 
 main .section-content {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1px 0;
-  z-index: 150; }
+  z-index: 150;
+  padding: 0.5em; }
 
 main section#contact {
   background-color: white;
   padding: 1em 0 1em 0; }
 
 section#about {
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%); }
+  background-color: #205AA9; }
+
+section#about {
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%); }
 
 main section#experience {
   background-color: white;
@@ -422,7 +488,7 @@ main section#first h1 {
   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%); }
   .seperator .gigantic {
-    margin: 1em auto 1em auto;
+    margin: 0.5em auto 0.5em auto;
     max-width: 15em;
     font-size: 6.8em;
     font-weight: 400;
@@ -434,29 +500,8 @@ main section#first h1 {
     background-size: cover;
     background-image: url("../img/text-bg.png"); }
 
-footer {
-  bottom: 0;
-  background-color: #123561;
-  color: white;
-  position: relative;
-  z-index: 4000;
-  padding: 50px 0 10px 100px;
-  text-align: center; }
-  footer h1 {
-    font-weight: 300; }
-  footer h1,
-  footer h2 {
-    margin: 0 0 30px; }
-  footer hl {
-    font-weight: 400; }
-  footer svg {
-    max-height: 100px;
-    fill: white; }
-  footer a {
-    color: white; }
-
 .bio {
-  margin-top: 10em; }
+  margin-top: 4em; }
 
 .bio-img-container img {
   max-width: 230px;
@@ -506,8 +551,8 @@ footer {
     display: none; }
   .section-content {
     padding: 15px !important; }
-  footer {
-    padding-left: 0; } }
+  footer .footer-container {
+    padding-left: 0em; } }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .gigantic {
@@ -526,6 +571,8 @@ footer {
       font-size: 4em; }
     header .development-text {
       font-size: 2.24em; }
+  footer .footer-credits-container {
+    margin: 1em auto auto auto; }
   .gigantic {
     font-size: 2.8em !important; }
   .case {
@@ -540,3 +587,19 @@ footer {
     height: 500px; }
   .ng-animate.ng-enter {
     height: 600px; } }
+
+.fade-in {
+  -webkit-transition: 2s linear all;
+  transition: 2s linear all; }
+
+.fade-in.ng-enter {
+  opacity: 0; }
+
+.fade-in.ng-enter.ng-enter-active {
+  opacity: 1; }
+
+.fade-in.ng-leave {
+  opacity: 1; }
+
+.fade-in.ng-leave.ng-leave-active {
+  opacity: 0; }
