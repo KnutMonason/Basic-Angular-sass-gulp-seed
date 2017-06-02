@@ -17,9 +17,13 @@ app.config(['$routeProvider', '$locationProvider',
             }).when('/project3', {
                 templateUrl: 'application/templates/content/project3.html',
                 controller: 'projectCtrl'
-            }).otherwise({
-                templateUrl: 'application/templates/content/portfolio.html',
+            }).when('/', {
+                templateUrl: 'application/templates/content/home.html',
                 controller: 'projectCtrl'
+            })
+            .otherwise({
+                templateUrl: 'application/templates/content/home.html',
+                controller: 'navCtrl'
             });
 
 

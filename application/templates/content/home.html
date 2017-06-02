@@ -1,0 +1,30 @@
+<div ng-controller="navCtrl">
+    <div class="fade-in" ng-include='"application/templates/header/header.html"'>
+    </div>
+    <main>
+
+        <div id="first">
+
+            <div ng-include='"application/templates/navbar/navbar.html"'>
+
+            </div>
+            <section id="about">
+                <div class="section-content" ng-include='"application/templates/content/about.html"'> </div>
+            </section>
+            <section id="seperator">
+                <div class="section-content" ng-include='"application/templates/content/seperator.html"'> </div>
+            </section>
+            <section ng-controller="skillCtrl" id="skill-set">
+                <div class="section-content" ng-include='"application/templates/content/skillset.html"'> </div>
+            </section>
+            <!--            <section class="view-animate-container" id="projects">
+                <div class="view-animate" ng-view></div>
+            </section>-->
+            <section class="view-animate-container" id="portfolio">
+                <div class="section-content" ng-include='"application/templates/content/portfolio.html"'> </div>
+            </section>
+            <section id="contact">
+                <div class="section-content" ng-include='"application/templates/content/contact.html"'> </div>
+            </section>
+    </main>
+    </div>
