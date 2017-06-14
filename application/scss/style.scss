@@ -14,6 +14,7 @@
     @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
     @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
     @import url(https://fonts.googleapis.com/css?family=Vidaloka);
+    @import "preloader";
     @import "navbar";
     @import "header";
     @import "portfolio";
@@ -24,13 +25,13 @@
         box-sizing: border-box;
         overflow-x: hidden;
     }
-    
+
     *,
     *:after,
     *:before {
         box-sizing: inherit;
     }
-    
+
     body {
         margin: 0;
         padding: 0;
@@ -88,28 +89,28 @@
             color: white;
         }
     }
-    
+
     .hidden {
         display: none;
         transition: all 0.3s ease;
     }
-    
+
     nav {
         display: block;
     }
-    
+
     main {
         position: relative;
         padding-left: $nav-desktop;
         z-index: 100;
     }
-    
+
     main section {
         width: 100%;
         position: relative;
         background-color: white;
     }
-    
+
     main .section-content {
         max-width: 1000px;
         margin-left: auto;
@@ -117,32 +118,32 @@
         z-index: 150;
         padding: 0.5em;
     }
-    
+
     main section#contact {
         background-color: white;
         padding: 1em 0 1em 0;
     }
-    
+
     section#about {
         background-color: $prime-blue;
     }
-    
+
     section#about {
         -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
         clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
     }
-    
+
     main section#experience {
         background-color: white;
         color: $prime-blue;
     }
-    
+
     main section#first {
         h1 {
             color: $prime-color;
         }
     }
-    
+
     .unselectable {
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -150,11 +151,11 @@
         -ms-user-select: none;
         user-select: none;
     }
-    
+
     .title {
         text-align: center;
     }
-    
+
     .seperator {
         -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
         clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
@@ -172,11 +173,11 @@
             background-image: url("../img/text-bg.png");
         }
     }
-    
+
     .bio {
         margin-top: 4em;
     }
-    
+
     .bio-img-container img {
         max-width: 230px;
         height: auto;
@@ -186,16 +187,16 @@
         display: block;
         margin-top: 17px;
     }
-    
+
     .dots {
         margin-bottom: 25px;
     }
-    
+
     .experience-text,
     .experience-dot {
         display: inline-block;
     }
-    
+
     .process {
         padding: 50px;
         text-align: center;
@@ -207,7 +208,7 @@
             color: white;
         }
     }
-    
+
     .hole {
         border-radius: 100px;
         position: relative;
@@ -224,7 +225,7 @@
             background-color: mediumseagreen;
         }
     }
-    
+
     @media screen and (max-width: 1110px) {
         nav {
             width: $nav-small;
@@ -242,14 +243,14 @@
             padding-left: 0em;
         }
     }
-    
+
     @media all and (-ms-high-contrast: none),
     (-ms-high-contrast: active) {
         .gigantic {
             background-image: none !important;
         }
     }
-    
+
     @media screen and (max-width: 768px) {
         * {
             clip-path: none !important;
@@ -290,25 +291,4 @@
         .ng-animate.ng-enter {
             height: 600px;
         }
-    }
-    
-    .fade-in {
-        -webkit-transition: 2s linear all;
-        transition: 2s linear all;
-    }
-    
-    .fade-in.ng-enter {
-        opacity: 0;
-    }
-    
-    .fade-in.ng-enter.ng-enter-active {
-        opacity: 1;
-    }
-    
-    .fade-in.ng-leave {
-        opacity: 1;
-    }
-    
-    .fade-in.ng-leave.ng-leave-active {
-        opacity: 0;
     }
