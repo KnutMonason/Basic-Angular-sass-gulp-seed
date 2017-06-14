@@ -14,10 +14,22 @@
     <link rel="shortcut icon" href="application/img/km.ico" type="image/x-icon">
     <link rel="icon" href="application/img/km.ico" type="image/x-icon">
 </head>
-
+<div class="cover">
+<div class="preloader loading">
+  <span class="slice"></span>
+  <span class="slice"></span>
+  <span class="slice"></span>
+  <span class="slice"></span>
+  <span class="slice"></span>
+  <span class="slice"></span>
+</div>
+<div class="preloader-logo">
+  <img src="application/img/kmwhite2.png">
+</div>
+</div>
 <body ng-app="myApp" ng-controller="loadCtrl">
-
-    <div ng-view>
+<div class="content-container" style=" display: none">
+    <div id="viewContainer" class="fade-in"  ng-init="load()" ng-view>
     </div>
 
 
@@ -27,6 +39,7 @@
             </section>-->
 
     <div ng-include='"application/templates/footer/footer.html"'></div>
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular-route.min.js"></script>
@@ -54,6 +67,7 @@
         ga('create', 'UA-80182084-1', 'auto');
         ga('send', 'pageview');
     </script>
+
 </body>
 
 

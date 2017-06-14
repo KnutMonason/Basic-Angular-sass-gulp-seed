@@ -17,11 +17,7 @@ app.config(['$routeProvider', '$locationProvider',
             }).when('/project3', {
                 templateUrl: 'application/templates/content/project3.html',
                 controller: 'projectCtrl'
-            }).when('/', {
-                templateUrl: 'application/templates/content/home.html',
-                controller: 'projectCtrl'
-            })
-            .otherwise({
+            }).otherwise({
                 templateUrl: 'application/templates/content/home.html',
                 controller: 'navCtrl'
             });
@@ -34,9 +30,14 @@ app.config(['$routeProvider', '$locationProvider',
 ]);
 
 app.controller('loadCtrl', ["$scope", function($scope) {
-    $scope.$on('$viewContentLoaded', function() {
-        $("#skill-set").css("background-color", "#205AA9");
-    });
+    // $scope.$on('$viewContentLoaded', function() {
+    //     $("#skill-set").css("background-color", "#205AA9");
+    //
+    // });
+    $scope.load = function(){
+          $(".cover").delay(1000).fadeOut(300);
+          $(".content-container").delay(1200).fadeIn(300);
+    }
 }]);
 
 app.controller('navCtrl', function($scope, $window, $document) {
