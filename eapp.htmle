@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    {{ HEAD }}
+  </head>
+  <body {{ BODY_ATTRS }}>
+    <div id="smooth-container">
+    {{ APP }}
+    </div>
+  <!--  <span class="c-scrollbar"><span class="c-scrollbar_thumb"></span></span> -->
+  </body>
+</html>

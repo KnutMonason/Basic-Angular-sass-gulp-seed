@@ -1,0 +1,185 @@
+
+:root {
+  --line-1: 7.1428vw;
+  --line-2: 14.285vw;
+  --line-3: 21.4284vw;
+  --line-4: 28.5712vw;
+  --line-5: 35.714vw;
+  --line-6: 42.8568vw;
+  --line-7: 49.9996vw;
+  --line-8: 57.1424vw;
+  --line-9: 64.2852vw;
+  --line-10: 71.428vw;
+  --line-11: 78.5708vw;
+  --line-12: 85.7136vw;
+  --line-13: 92.8564vw;
+  --line-14: 100vw;
+  
+  --green: #449A6A;
+  --dark: #191919;
+  --medium: #777777;
+  --light: #DDDDDD;
+  --navy: #07003E;
+}
+@media only screen and (max-width: 680px) { 
+  :root {
+    --line-1: auto;
+    --line-2: auto;
+    --line-3: auto;
+    --line-4: auto;
+    --line-5: auto;
+    --line-6: auto;
+    --line-7: auto;
+    --line-8: auto;
+    --line-9: auto;
+    --line-10: auto;
+    --line-11: auto;
+    --line-12: auto;
+    --line-13: auto;
+    --line-14: auto;
+  }
+}
+@font-face {
+font-family: hkgrotesk;
+src: url('/fonts/hkmed.otf');
+font-weight: normal;
+}
+
+@font-face {
+font-family: hkgrotesk;
+src: url('/fonts/hkbold.otf');
+font-weight: bold;
+}
+
+@font-face {
+font-family: ok;
+src: url('/fonts/murica.woff2');
+font-weight: bold;
+}
+
+@font-face {
+font-family: sweet;
+src: url('/fonts/jahap.woff2');
+font-weight: bold;
+}
+
+@font-face {
+font-family: gtregext;
+src: url('/fonts/gtregext.woff2');
+font-weight: bold;
+}
+
+@font-face {
+font-family: gtsecdispsup;
+src: url('/fonts/gtsecdispsup.woff2');
+font-weight: bold;
+}
+
+@font-face {
+font-family: gtsecdispreg;
+src: url('/fonts/gtsecdispreg.woff2');
+font-weight: bold;
+}
+
+@font-face {
+font-family: basier_reg;
+src: url('/fonts/basier_reg.woff2');
+font-weight: normal;
+}
+
+
+
+
+
+
+.page-enter-active {
+  animation: acrossIn .3s ease-out both;
+}
+.page-leave-active {
+  animation: acrossOut .3s ease-in both;
+}
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(0, 100px, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes acrossOut {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+
+  }
+}
+
+:root {
+  --primary-color: #181818;
+  --secondary-color: #dadada;
+  --primary-font: basier_reg;
+  --secondary-font: basier_reg;
+  
+  --mobile-break: 480px;
+  --medium-break: 880px;
+}
+
+html {
+  /*  overflow: hidden; */
+}
+
+
+body {
+  font-family: var(--primary-font);
+  letter-spacing: 0.02em;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: 400;
+}
+
+.c-scrollbar {
+    width: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    transform-origin: center right;
+    transform: scaleX(1);
+    transition: transform .2s linear
+}
+
+.c-scrollbar:hover {
+    transform: scaleX(1.3);
+    cursor: -webkit-grab;
+    cursor: grab
+}
+
+.c-scrollbar_thumb {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.c-scrollbar_thumb:hover {
+    cursor: pointer
+}
